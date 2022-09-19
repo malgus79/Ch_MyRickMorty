@@ -17,9 +17,9 @@ constructor(
     private val apiService: ApiService
 ) : ViewModel() {
 
-//    val listData = Pager(PagingConfig(pageSize = 1)) {
-//        RickyMortyPagingSource(apiService)
-//
-//    }.flow.cachedIn(viewModelScope)
+    val listData = Pager(PagingConfig(pageSize = 1)) {
+        RickyMortyPagingSource(apiService)
+
+    }.flow.cachedIn(viewModelScope)
 
 }

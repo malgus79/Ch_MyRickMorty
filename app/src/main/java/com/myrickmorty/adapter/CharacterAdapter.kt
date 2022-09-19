@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.myrickmorty.databinding.CharacterLayoutBinding
 import com.myrickmorty.model.RickMorty
+import com.myrickmorty.ui.FragmentListDirections
 
 class CharacterAdapter : PagingDataAdapter<RickMorty,
         CharacterAdapter.ImageViewHolder>(diffCallback) {
@@ -55,20 +56,20 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .into(imageView)
 
-//                setOnClickListener {
-//                    val action = FragmentListDirections.actionFragmentListToFragmentDetail(
-//                        currChar?.gender.toString(),
-//                        currChar?.id!!,
-//                        currChar.image.toString(),
-//                        currChar.name.toString(),
-//                        currChar.species.toString(),
-//                        currChar.status.toString(),
-//                        currChar.type.toString(),
-//                        currChar.url.toString(),
-//                        currChar.created.toString()
-//                    )
-//                    this.findNavController().navigate(action)
-//                }
+                setOnClickListener {
+                    val action = FragmentListDirections.actionFragmentListToFragmentDetail(
+                        currChar?.gender.toString(),
+                        currChar?.id!!,
+                        currChar.image.toString(),
+                        currChar.name.toString(),
+                        currChar.species.toString(),
+                        currChar.status.toString(),
+                        currChar.type.toString(),
+                        currChar.url.toString(),
+                        currChar.created.toString()
+                    )
+                    this.findNavController().navigate(action)
+                }
 
 //                val imageLink = currChar?.image
 //                imageView.load(imageLink) {
