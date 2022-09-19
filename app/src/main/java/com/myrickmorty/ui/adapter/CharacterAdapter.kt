@@ -1,4 +1,4 @@
-package com.myrickmorty.adapter
+package com.myrickmorty.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.myrickmorty.databinding.CharacterLayoutBinding
-import com.myrickmorty.model.RickMorty
-import com.myrickmorty.ui.FragmentListDirections
+import com.myrickmorty.model.data.RickMorty
+import com.myrickmorty.ui.fragment.FragmentListDirections
 
 class CharacterAdapter : PagingDataAdapter<RickMorty,
         CharacterAdapter.ImageViewHolder>(diffCallback) {

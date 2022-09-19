@@ -1,4 +1,4 @@
-package com.myrickmorty.model
+package com.myrickmorty.model.data
 
 data class RickMorty(
     val created: String?,

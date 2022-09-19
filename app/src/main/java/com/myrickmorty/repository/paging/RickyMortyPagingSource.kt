@@ -1,13 +1,13 @@
-package com.myrickmorty.paging
+package com.myrickmorty.repository.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.myrickmorty.api.ApiService
-import com.myrickmorty.model.RickMorty
+import com.myrickmorty.model.data.RickMorty
+import com.myrickmorty.repository.Repository
 
 class RickyMortyPagingSource
     (
-    private val apiService: ApiService
+    private val repository: Repository
 ) : PagingSource<Int, RickMorty>() {
 
     override fun getRefreshKey(state: PagingState<Int, RickMorty>): Int? {
@@ -19,7 +19,7 @@ class RickyMortyPagingSource
 
         return try {
             val currentPage = params.key ?: 1
-            val response = apiService.getAllCharacters(currentPage)
+            val response = repository.getAllCharacters(currentPage)
             val responseData = mutableListOf<RickMorty>()
             val data = response.body()?.results ?: emptyList()
             responseData.addAll(data)

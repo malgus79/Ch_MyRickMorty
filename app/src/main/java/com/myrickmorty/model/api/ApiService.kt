@@ -1,6 +1,6 @@
-package com.myrickmorty.api
+package com.myrickmorty.model.api
 
-import com.myrickmorty.model.ResponseApi
+import com.myrickmorty.model.data.ResponseApi
 import com.myrickmorty.utils.Constants
 import retrofit2.Response
 import retrofit2.http.GET
