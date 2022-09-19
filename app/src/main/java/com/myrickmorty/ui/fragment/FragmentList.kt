@@ -2,14 +2,14 @@ package com.myrickmorty.ui.fragment
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.myrickmorty.R
-import com.myrickmorty.ui.adapter.CharacterAdapter
 import com.myrickmorty.databinding.FragmentListBinding
+import com.myrickmorty.ui.adapter.CharacterAdapter
 import com.myrickmorty.viewmodel.FragmentListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -38,7 +38,8 @@ class FragmentList : Fragment(R.layout.fragment_list) {
         binding.recyclerView.apply {
             adapter = characterAdapter
             layoutManager = StaggeredGridLayoutManager(
-                2, StaggeredGridLayoutManager.VERTICAL
+                resources.getInteger(R.integer.main_columns),
+                StaggeredGridLayoutManager.VERTICAL
             )
             setHasFixedSize(true)
         }

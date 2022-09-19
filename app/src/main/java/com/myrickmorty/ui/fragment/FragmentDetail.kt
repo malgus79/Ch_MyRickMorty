@@ -30,7 +30,7 @@ class FragmentDetail : Fragment(R.layout.fragment_detail) {
             .circleCrop()
             .into(binding.imgCharacterSmall)
 
-        binding.txtNameTitle.text = args.name
+        binding.txtName.text = args.name
         binding.txtSpecies.text = args.species
         binding.txtStatus.text = args.status
         binding.txtGender.text = args.gender

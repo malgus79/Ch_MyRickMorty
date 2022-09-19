@@ -22,8 +22,9 @@
 
             <ImageView
                 android:id="@+id/img_character"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="350dp"
+                android:layout_gravity="center"
                 android:contentDescription="image" />
 
             <View
@@ -60,21 +61,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="559dp" />
-
-        <TextView
-            android:id="@+id/txt_name_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:fontFamily="sans-serif-black"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="@dimen/common_size_middle"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/cardView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:text="name" />
 
         <TextView
             android:id="@+id/txt_species"
@@ -140,12 +126,46 @@
             android:gravity="center"
             android:padding="@dimen/common_padding_min"
             android:text="Extra details"
-            android:textColor="@color/white"
+            android:textColor="@color/grey"
             android:textSize="@dimen/common_size_default"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/divider_line" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_min"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_extra"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_middle"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"
+                tools:text="name"
+                android:text="Name: "/>
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_default"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_size_default"
+                tools:text="name" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout_Type"
@@ -155,7 +175,7 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_extra"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_Name"
             tools:ignore="UseCompoundDrawables">
 
             <TextView
