@@ -17,7 +17,7 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
 
 
     inner class ImageViewHolder(
-        val binding: CharacterLayoutBinding
+        val binding: CharacterLayoutBinding,
     ) :
         RecyclerView.ViewHolder(binding.root)
 
@@ -78,8 +78,5 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
 //                }
             }
         }
-
     }
-
-
 }

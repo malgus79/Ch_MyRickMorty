@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!-- margin -->
     <dimen name="common_margin_header">2dp</dimen>
     <dimen name="common_margin_min">8dp</dimen>
     <dimen name="common_margin_default">16dp</dimen>
     <dimen name="common_margin_middle">32dp</dimen>
 
+    <!-- size -->
     <dimen name="common_size_min">12sp</dimen>
     <dimen name="common_size_default">20sp</dimen>
     <dimen name="common_size_title">25sp</dimen>
     <dimen name="common_size_middle">30sp</dimen>
 
+    <!-- corner -->
     <dimen name="common_corner_min">8dp</dimen>
     <dimen name="common_corner_default">16dp</dimen>
 
+    <!-- padding -->
     <dimen name="common_padding_min">8dp</dimen>
     <dimen name="common_padding_default">16dp</dimen>
 

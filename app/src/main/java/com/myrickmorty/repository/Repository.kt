@@ -8,6 +8,6 @@ import javax.inject.Inject
 class Repository @Inject constructor(private val ApiService: ApiService) {
 
     suspend fun getAllCharacters(currentPage: Int): Response<ResponseApi> {
-    return ApiService.getAllCharacters(currentPage)
+        return ApiService.getAllCharacters(currentPage)
     }
 }

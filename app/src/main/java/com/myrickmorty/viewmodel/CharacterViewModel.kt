@@ -9,7 +9,7 @@ import javax.inject.Inject
 class CharacterViewModel
 @Inject
 constructor(
-    private val apiService: ApiService
+    private val apiService: ApiService,
 ) : ViewModel() {
 
 //    val listData = Pager(PagingConfig(pageSize = 1)) {

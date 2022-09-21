@@ -5,4 +5,5 @@
     <string name="fragment_detail">Character Detail</string>
     <string name="alertSignOutTitle">¿Realmente deseas salir?</string>
     <string name="alertSignOutTDescription">Puedes volver cuando quieras :)</string>
+    <string name="ok">Ok</string>
 </resources>

@@ -5,7 +5,7 @@
     android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_margin="@dimen/common_margin_min"
     android:elevation="10dp"
     app:cardCornerRadius="@dimen/common_corner_default">
 
@@ -26,9 +26,10 @@
             android:id="@+id/tv_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/common_margin_min"
             android:text="TextView"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="@dimen/common_size_default"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

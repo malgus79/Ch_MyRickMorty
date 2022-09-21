@@ -6,8 +6,10 @@
         <entry key="..\:/Users/gamcb/Archivos Android/MyRickMorty/app/src/main/res/drawable/gradient.xml" value="0.1" />
         <entry key="..\:/Users/gamcb/Archivos Android/MyRickMorty/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/gamcb/Archivos Android/MyRickMorty/app/src/main/res/layout/character_layout.xml" value="0.25226449275362317" />
-        <entry key="..\:/Users/gamcb/Archivos Android/MyRickMorty/app/src/main/res/layout/fragment_detail.xml" value="0.25226449275362317" />
+        <entry key="..\:/Users/gamcb/Archivos Android/MyRickMorty/app/src/main/res/layout/error_state.xml" value="0.23278985507246377" />
+        <entry key="..\:/Users/gamcb/Archivos Android/MyRickMorty/app/src/main/res/layout/fragment_detail.xml" value="0.1" />
         <entry key="..\:/Users/gamcb/Archivos Android/MyRickMorty/app/src/main/res/layout/fragment_list.xml" value="0.25226449275362317" />
+        <entry key="..\:/Users/gamcb/Archivos Android/MyRickMorty/app/src/main/res/layout/item_load_state.xml" value="0.25679347826086957" />
       </map>
     </option>
   </component>

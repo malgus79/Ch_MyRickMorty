@@ -1,9 +1,9 @@
 package com.myrickmorty.ui
 
 import android.content.DialogInterface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         if (!binding.navHostFragment.isVisible) {
             alertSignOut()
         } else
-        super.onBackPressed()
+            super.onBackPressed()
     }
 
 //    override fun getOnBackInvokedDispatcher(): OnBackInvokedDispatcher {

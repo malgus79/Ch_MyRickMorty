@@ -1,8 +1,8 @@
 package com.myrickmorty.ui.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.myrickmorty.R
@@ -30,14 +30,14 @@ class FragmentDetail : Fragment(R.layout.fragment_detail) {
             .circleCrop()
             .into(binding.imgCharacterSmall)
 
-        binding.txtName.text = args.name
-        binding.txtSpecies.text = args.species
-        binding.txtStatus.text = args.status
-        binding.txtGender.text = args.gender
-        binding.txtType.text = args.type
-        binding.txtId.text = args.id.toString()
-        binding.txtCreated.text = args.created
-        binding.txtUrl.text = args.url
+        binding.tvName.text = args.name
+        binding.tvSpecies.text = args.species
+        binding.tvStatus.text = args.status
+        binding.tvGender.text = args.gender
+        binding.tvType.text = args.type
+        binding.tvId.text = args.id.toString()
+        binding.tvCreated.text = args.created
+        binding.tvUrl.text = args.url
 
     }
 }
