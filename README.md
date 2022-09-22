@@ -4,8 +4,8 @@ Aplicacion de la serie Rick & Morty.
 - Coroutines
 - Live Data
 - Retrofit2
-- Patron Master-Detail
-- Paginado de lista
+- Pattern Master-Detail
+- Pagination
 - Material Design
 - Navigation component
 -   Unit testing
