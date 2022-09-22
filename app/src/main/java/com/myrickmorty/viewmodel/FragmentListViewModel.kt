@@ -15,6 +15,7 @@ import com.myrickmorty.repository.Repository
 import com.myrickmorty.utils.Constants.PAGE_INDEX
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import retrofit2.Response
 import javax.inject.Inject
 
 @HiltViewModel
@@ -24,8 +25,8 @@ constructor(
     private val repository: Repository,
 ) : ViewModel() {
 
-    private val _characterList = MutableLiveData<State<ResponseApi>>()
-    val characterList: LiveData<State<ResponseApi>> = _characterList
+    private val _characterList = MutableLiveData<State<Response<ResponseApi>>>()
+    val characterList: LiveData<State<Response<ResponseApi>>> = _characterList
 
     fun getCharacters() {
         _characterList.postValue(State.Loading())
