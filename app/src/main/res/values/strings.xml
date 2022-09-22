@@ -6,4 +6,8 @@
     <string name="alertSignOutTitle">¿Realmente deseas salir?</string>
     <string name="alertSignOutTDescription">Puedes volver cuando quieras :)</string>
     <string name="ok">Ok</string>
+    <string name="error_dialog">Error</string>
+    <string name="error_dialog_detail">Ha ocurrido un error de conexión. Puede reintentar conectarse. Si el problema persiste, por favor salir y verificar su conexión</string>
+    <string name="try_again">Reintentar</string>
+
 </resources>

@@ -1,7 +1,11 @@
 package com.myrickmorty.core
 
-sealed class State<out T> {
-    class Loading<out T> : State<T>()
-    data class Success<out T>(val data: T) : State<T>()
-    data class Failure(val exception: Exception) : State<Nothing>()
+import com.myrickmorty.model.data.ResponseApi
+import retrofit2.Response
+
+sealed class State<T>()  {
+
+    class Success<T>(val results: Response<ResponseApi>) : State<T>()
+    class Failure<T>(val cause: Throwable) : State<T>()
+    class Loading<T>() : State<T>()
 }
