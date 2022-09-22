@@ -1,13 +1,14 @@
 <resources>
-    <string name="app_name">MyRickMorty</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="fragment_detail">Character Detail</string>
-    <string name="alertSignOutTitle">¿Realmente deseas salir?</string>
-    <string name="alertSignOutTDescription">Puedes volver cuando quieras :)</string>
+    <string name="app_name" translatable="false">My Rick Morty</string>
+
+    <string name="fragment_detail">   Character detail   </string>
+    <string name="extra_details">Character details</string>
+    <string name="alertSignOutTitle">¿ Do you want to exit the application? ?</string>
+    <string name="alertSignOutTDescription">You can come back whenever you want :)</string>
     <string name="ok">Ok</string>
     <string name="error_dialog">Error</string>
-    <string name="error_dialog_detail">Ha ocurrido un error de conexión. Puede reintentar conectarse. Si el problema persiste, por favor salir y verificar su conexión</string>
-    <string name="try_again">Reintentar</string>
+    <string name="error_dialog_detail">A connection error has occurred. You can retry connecting. If the problem persists, please exit and check your connection.</string>
+    <string name="try_again">Retry</string>
+    <string name="error_dialog_retry">Error trying to load information</string>
 
 </resources>

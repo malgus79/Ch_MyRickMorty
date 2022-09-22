@@ -4,8 +4,6 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -20,14 +18,11 @@ import com.myrickmorty.R
 import com.myrickmorty.core.State
 import com.myrickmorty.databinding.FragmentListBinding
 import com.myrickmorty.model.data.ResponseApi
-import com.myrickmorty.model.data.RickMorty
 import com.myrickmorty.ui.adapter.CharacterAdapter
 import com.myrickmorty.viewmodel.FragmentListViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import retrofit2.Response
-import java.lang.System.exit
 
 @AndroidEntryPoint
 class FragmentList : Fragment(R.layout.fragment_list) {
@@ -97,8 +92,8 @@ class FragmentList : Fragment(R.layout.fragment_list) {
 
         errorState?.let {
             var lay = binding.root
-            Snackbar.make(lay, "Error al intentar cargar información", Snackbar.LENGTH_LONG)
-                .setAction("OK") {
+            Snackbar.make(lay, (R.string.error_dialog_retry), Snackbar.LENGTH_LONG)
+                .setAction(R.string.ok) {
                     lay.setBackgroundColor(Color.CYAN)
                 }.show()
         }

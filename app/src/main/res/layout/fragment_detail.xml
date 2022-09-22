@@ -125,7 +125,7 @@
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
             android:padding="@dimen/common_padding_min"
-            android:text="Extra details"
+            android:text="@string/extra_details"
             android:textColor="@color/grey"
             android:textSize="@dimen/common_size_default"
             android:textStyle="bold"
