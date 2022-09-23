@@ -20,6 +20,7 @@ class FragmentDetail : Fragment(R.layout.fragment_detail) {
 
         binding = FragmentDetailBinding.bind(view)
 
+        //Load data in fragment detail (imagen and data)
         Glide.with(requireContext())
             .load(args.image)
             .centerCrop()

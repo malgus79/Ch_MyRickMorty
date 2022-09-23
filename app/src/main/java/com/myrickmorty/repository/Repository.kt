@@ -7,6 +7,7 @@ import javax.inject.Inject
 
 class Repository @Inject constructor(private val ApiService: ApiService) {
 
+    //Calls APIServices getAllCharacters suspend function
     suspend fun getAllCharacters(currentPage: Int): Response<ResponseApi> {
         return ApiService.getAllCharacters(currentPage)
     }

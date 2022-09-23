@@ -38,6 +38,7 @@ class FragmentList : Fragment(R.layout.fragment_list) {
         setupRecyclerView()
         loadData()
 
+        //Observer pattern: loading and data handling
         viewModel.getCharacters()
         viewModel.characterList.observe(viewLifecycleOwner, Observer {
             when (it) {
@@ -54,6 +55,7 @@ class FragmentList : Fragment(R.layout.fragment_list) {
         })
     }
 
+    //Setup RecyclerView
     private fun setupRecyclerView(isLoad: Boolean = false) {
         characterAdapter = CharacterAdapter()
 
@@ -70,6 +72,7 @@ class FragmentList : Fragment(R.layout.fragment_list) {
         }
     }
 
+    //Load data from PagingSource
     private fun loadData() {
         lifecycleScope.launch {
             viewModel.listData.collect {
@@ -79,13 +82,14 @@ class FragmentList : Fragment(R.layout.fragment_list) {
         }
     }
 
+    //Handling ProgressBar and RecyclerView
     private fun setCharacter(characterList: Response<ResponseApi>) {
         if (characterList.body()?.results.isNullOrEmpty()) {
             showSpinnerLoading(false)
             binding.recyclerView.adapter = CharacterAdapter()
         }
     }
-
+    //Handling Error
     private fun handleError(loadState: CombinedLoadStates) {
         val errorState = loadState.source.append as? LoadState.Error
             ?: loadState.source.prepend as? LoadState.Error
@@ -99,11 +103,13 @@ class FragmentList : Fragment(R.layout.fragment_list) {
         }
     }
 
+    //Show spinner loading
     private fun showSpinnerLoading(loading: Boolean) {
         binding.recyclerView.isVisible = !loading
         binding.progressBar.isVisible = loading
     }
 
+    //Show Error Dialog
     private fun showErrorDialog(callback: (() -> Unit)? = null) {
         showSpinnerLoading(false)
         MaterialAlertDialogBuilder(requireContext())

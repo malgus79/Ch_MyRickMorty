@@ -8,6 +8,7 @@ import retrofit2.http.Query
 
 interface ApiService {
 
+    //This endpoint returns a list of "page"
     @GET(Constants.END_POINT)
     suspend fun getAllCharacters(
         // @Query("count") size:Int,

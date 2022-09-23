@@ -25,9 +25,11 @@ constructor(
     private val repository: Repository,
 ) : ViewModel() {
 
+    //Internal/External MutableLiveData
     private val _characterList = MutableLiveData<State<Response<ResponseApi>>>()
     val characterList: LiveData<State<Response<ResponseApi>>> = _characterList
 
+    //Downloads data from api with repository
     fun getCharacters() {
         _characterList.postValue(State.Loading())
         viewModelScope.launch {
@@ -44,6 +46,7 @@ constructor(
         }
     }
 
+    //Load data from DataPagingSource
     val listData = Pager(PagingConfig(pageSize = 1)) {
         DataPagingSource(repository)
     }.flow.cachedIn(viewModelScope)
