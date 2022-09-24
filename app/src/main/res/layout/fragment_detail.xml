@@ -11,6 +11,16 @@
         android:layout_height="match_parent"
         tools:context=".ui.fragment.FragmentDetail">
 
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <FrameLayout
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"
@@ -51,7 +61,7 @@
                 android:layout_height="match_parent"
                 android:contentDescription="image"
                 android:scaleType="centerCrop"
-                android:src="@mipmap/ic_launcher" />
+                tools:src="@mipmap/ic_launcher" />
 
         </androidx.cardview.widget.CardView>
 

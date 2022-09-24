@@ -89,6 +89,7 @@ class FragmentList : Fragment(R.layout.fragment_list) {
             binding.recyclerView.adapter = CharacterAdapter()
         }
     }
+
     //Handling Error
     private fun handleError(loadState: CombinedLoadStates) {
         val errorState = loadState.source.append as? LoadState.Error
@@ -116,7 +117,7 @@ class FragmentList : Fragment(R.layout.fragment_list) {
             .setTitle(getString(R.string.error_dialog))
             .setMessage(getString(R.string.error_dialog_detail))
             .setPositiveButton(getString(R.string.try_again)) { _, _ -> viewModel.getCharacters() }
-            .setNegativeButton(getString(R.string.ok)) { _, _ -> }
+            .setNegativeButton(getString(R.string.ok)) { _, _ -> showSpinnerLoading(true) }
             .setCancelable(false)
             .show()
     }
