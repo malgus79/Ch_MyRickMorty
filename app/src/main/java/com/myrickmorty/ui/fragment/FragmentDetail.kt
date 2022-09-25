@@ -42,7 +42,7 @@ class FragmentDetail : Fragment(R.layout.fragment_detail) {
                     val handlerTimer = Handler()
                     handlerTimer.postDelayed(Runnable {
                         showErrorDialog()
-                    }, 1500)
+                    }, 1000)
                 }
             }
         })

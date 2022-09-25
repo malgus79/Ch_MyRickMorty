@@ -17,6 +17,7 @@ class FragmentDetailViewModel @Inject constructor(private val repository: Reposi
     private val _newStatus = MutableLiveData<ApiStatus>()
     val newStatus: LiveData<ApiStatus> = _newStatus
 
+    //Downloads data from api with repository - ApiStatus
     fun getCharacters() {
         _newStatus.value = ApiStatus.LOADING
         viewModelScope.launch {

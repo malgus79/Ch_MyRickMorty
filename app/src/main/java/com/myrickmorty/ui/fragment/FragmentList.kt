@@ -2,6 +2,7 @@ package com.myrickmorty.ui.fragment
 
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
 import androidx.core.view.isVisible
@@ -47,8 +48,13 @@ class FragmentList : Fragment(R.layout.fragment_list) {
                     showSpinnerLoading(false)
                 }
                 is State.Failure -> {
-                    showErrorDialog(callback = { viewModel.getCharacters() })
-                    binding.recyclerView.isVisible = false
+                    showSpinnerLoading(true)
+                    val handlerTimer = Handler()
+                    handlerTimer.postDelayed(Runnable {
+                        showErrorDialog(callback = { viewModel.getCharacters() })
+                        binding.recyclerView.isVisible = false
+                    }, 1000)
+
                 }
                 is State.Loading -> showSpinnerLoading(true)
             }
