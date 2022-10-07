@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
+import com.myrickmorty.core.ApiStatus
 import com.myrickmorty.core.ResourceNotFoundException
 import com.myrickmorty.core.State
 import com.myrickmorty.model.data.ResponseApi
@@ -25,22 +26,30 @@ constructor(
     private val repository: Repository,
 ) : ViewModel() {
 
-    //Internal/External MutableLiveData
+    //Internal/External MutableLiveData - ApiStatus
+    private val _statusData = MutableLiveData<ApiStatus>()
+    val statusData: LiveData<ApiStatus> = _statusData
+
+    //Internal/External MutableLiveData - ResponseApi
     private val _characterList = MutableLiveData<State<Response<ResponseApi>>>()
     val characterList: LiveData<State<Response<ResponseApi>>> = _characterList
 
     //Downloads data from api with repository
     fun getCharacters() {
+        _statusData.postValue(ApiStatus.LOADING)
         _characterList.postValue(State.Loading())
         viewModelScope.launch {
             try {
                 val characterList = repository.getAllCharacters(PAGE_INDEX)
                 if (characterList.body()?.results.isNullOrEmpty()) {
+                    _statusData.postValue(ApiStatus.ERROR)
                     _characterList.postValue(State.Failure(ResourceNotFoundException()))
                 } else {
+                    _statusData.postValue(ApiStatus.DONE)
                     _characterList.postValue(State.Success(characterList))
                 }
             } catch (e: Exception) {
+                _statusData.postValue(ApiStatus.ERROR)
                 _characterList.postValue(State.Failure(e))
             }
         }

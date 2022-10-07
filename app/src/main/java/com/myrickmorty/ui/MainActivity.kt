@@ -1,8 +1,6 @@
 package com.myrickmorty.ui
 
-import android.content.DialogInterface
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -39,30 +37,30 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    //Handling the back button
-    override fun onBackPressed() {
-        val count = fragmentManager.backStackEntryCount
-        if (count == 0) {
-            //super.onBackPressed()
-            alertSignOut()
-        } else {
-            fragmentManager.popBackStack()
-        }
-    }
-
-    //Dialog for signout
-    private fun alertSignOut() {
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.alertSignOutTitle))
-            .setMessage(R.string.alertSignOutTDescription)
-            .setPositiveButton(android.R.string.ok,
-                DialogInterface.OnClickListener { dialog, which ->
-                    finish()
-                })
-            .setNegativeButton(android.R.string.cancel,
-                DialogInterface.OnClickListener { dialog, which ->
-                })
-            .setCancelable(true)
-            .show()
-    }
+//    //Handling the back button
+//    override fun onBackPressed() {
+//        val count = fragmentManager.backStackEntryCount
+//        if (count == 0) {
+//            //super.onBackPressed()
+//            alertSignOut()
+//        } else {
+//            fragmentManager.popBackStack()
+//        }
+//    }
+//
+//    //Dialog for signout
+//    private fun alertSignOut() {
+//        AlertDialog.Builder(this)
+//            .setTitle(getString(R.string.alertSignOutTitle))
+//            .setMessage(R.string.alertSignOutTDescription)
+//            .setPositiveButton(android.R.string.ok,
+//                DialogInterface.OnClickListener { dialog, which ->
+//                    finish()
+//                })
+//            .setNegativeButton(android.R.string.cancel,
+//                DialogInterface.OnClickListener { dialog, which ->
+//                })
+//            .setCancelable(true)
+//            .show()
+//    }
 }

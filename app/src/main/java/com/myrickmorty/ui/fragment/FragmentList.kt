@@ -16,14 +16,12 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.myrickmorty.R
-import com.myrickmorty.core.State
+import com.myrickmorty.core.ApiStatus
 import com.myrickmorty.databinding.FragmentListBinding
-import com.myrickmorty.model.data.ResponseApi
 import com.myrickmorty.ui.adapter.CharacterAdapter
 import com.myrickmorty.viewmodel.FragmentListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import retrofit2.Response
 
 @AndroidEntryPoint
 class FragmentList : Fragment(R.layout.fragment_list) {
@@ -37,17 +35,16 @@ class FragmentList : Fragment(R.layout.fragment_list) {
         binding = FragmentListBinding.bind(view)
 
         setupRecyclerView()
-        loadData()
 
         //Observer pattern: loading and data handling
         viewModel.getCharacters()
-        viewModel.characterList.observe(viewLifecycleOwner, Observer {
+        viewModel.statusData.observe(viewLifecycleOwner, Observer {
             when (it) {
-                is State.Success<*> -> {
-                    setCharacter(it.results)
+                ApiStatus.DONE -> {
+                    loadData()
                     showSpinnerLoading(false)
                 }
-                is State.Failure -> {
+                ApiStatus.ERROR -> {
                     showSpinnerLoading(true)
                     val handlerTimer = Handler()
                     handlerTimer.postDelayed(Runnable {
@@ -56,7 +53,7 @@ class FragmentList : Fragment(R.layout.fragment_list) {
                     }, 1000)
 
                 }
-                is State.Loading -> showSpinnerLoading(true)
+                ApiStatus.LOADING -> showSpinnerLoading(true)
             }
         })
     }
@@ -88,13 +85,13 @@ class FragmentList : Fragment(R.layout.fragment_list) {
         }
     }
 
-    //Handling ProgressBar and RecyclerView
-    private fun setCharacter(characterList: Response<ResponseApi>) {
-        if (characterList.body()?.results.isNullOrEmpty()) {
-            showSpinnerLoading(false)
-            binding.recyclerView.adapter = CharacterAdapter()
-        }
-    }
+//    //Handling ProgressBar and RecyclerView
+//    private fun setCharacter(characterList: Response<ResponseApi>) {
+//        if (characterList.body()?.results.isNullOrEmpty()) {
+//            showSpinnerLoading(false)
+//            binding.recyclerView.adapter = CharacterAdapter()
+//        }
+//    }
 
     //Handling Error
     private fun handleError(loadState: CombinedLoadStates) {
