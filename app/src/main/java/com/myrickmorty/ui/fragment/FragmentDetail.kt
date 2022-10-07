@@ -82,8 +82,8 @@ class FragmentDetail : Fragment(R.layout.fragment_detail) {
             .setTitle(getString(R.string.error_dialog))
             .setMessage(getString(R.string.error_dialog_detail))
             .setPositiveButton(getString(R.string.try_again)) { _, _ -> viewModel.getCharacters() }
-            .setNegativeButton(getString(R.string.ok)) { _, _ -> showSpinnerLoading(true) }
-            .setCancelable(false)
+            //.setNegativeButton(getString(R.string.ok)) { _, _ -> showSpinnerLoading(true) }
+            //.setCancelable(false)
             .show()
     }
 }

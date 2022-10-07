@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.FrontActivity"
+    android:background="@color/black_dense">
+
+    <ImageView
+        android:id="@+id/iv_front_page"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:src="@mipmap/front_page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/iv_front_page"
+        android:text="ENTER"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/green_met"
+        style="@style/Widget.MaterialComponents.Chip.Entry"
+        android:layout_marginHorizontal="100dp"
+        android:onClick="callEnter"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -85,13 +85,15 @@ class FragmentList : Fragment(R.layout.fragment_list) {
         }
     }
 
-//    //Handling ProgressBar and RecyclerView
-//    private fun setCharacter(characterList: Response<ResponseApi>) {
-//        if (characterList.body()?.results.isNullOrEmpty()) {
-//            showSpinnerLoading(false)
-//            binding.recyclerView.adapter = CharacterAdapter()
-//        }
-//    }
+    /*
+    //Handling ProgressBar and RecyclerView
+    private fun setCharacter(characterList: Response<ResponseApi>) {
+        if (characterList.body()?.results.isNullOrEmpty()) {
+            showSpinnerLoading(false)
+            binding.recyclerView.adapter = CharacterAdapter()
+        }
+    }
+     */
 
     //Handling Error
     private fun handleError(loadState: CombinedLoadStates) {
