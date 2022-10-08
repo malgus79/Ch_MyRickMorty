@@ -21,6 +21,10 @@ class FrontActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnOut.setOnClickListener {
+            finish()
+        }
     }
 
     override fun onBackPressed() {
