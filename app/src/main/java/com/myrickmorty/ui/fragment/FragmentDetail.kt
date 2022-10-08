@@ -36,8 +36,10 @@ class FragmentDetail : Fragment(R.layout.fragment_detail) {
                 ApiStatus.DONE -> {
                     loadData()
                     showSpinnerLoading(false)
+                    failedData(true)
                 }
                 ApiStatus.ERROR -> {
+                    failedData(false)
                     showSpinnerLoading(true)
                     val handlerTimer = Handler()
                     handlerTimer.postDelayed(Runnable {
@@ -46,6 +48,20 @@ class FragmentDetail : Fragment(R.layout.fragment_detail) {
                 }
             }
         })
+    }
+
+    private fun failedData(view: Boolean) {
+        binding.cardView.isVisible = view
+        binding.tvSpecies.isVisible = view
+        binding.tvStatus.isVisible = view
+        binding.tvGender.isVisible = view
+        binding.dividerLine.isVisible = view
+        binding.tvExtra.isVisible = view
+        binding.linearLayoutName.isVisible = view
+        binding.linearLayoutType.isVisible = view
+        binding.linearLayoutId.isVisible = view
+        binding.linearLayoutCreated.isVisible = view
+        binding.linearLayoutUrl.isVisible = view
     }
 
     //Load data in fragment detail (imagen and data)
@@ -77,7 +93,6 @@ class FragmentDetail : Fragment(R.layout.fragment_detail) {
 
     //Show Error Dialog
     private fun showErrorDialog() {
-        showSpinnerLoading(false)
         MaterialAlertDialogBuilder(requireContext())
             .setTitle(getString(R.string.error_dialog))
             .setMessage(getString(R.string.error_dialog_detail))
