@@ -1,7 +1,7 @@
 package com.myrickmorty.di
 
+import com.myrickmorty.core.Constants.BASE_URL
 import com.myrickmorty.model.api.ApiService
-import com.myrickmorty.core.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,17 +14,18 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
+    @Singleton
     @Provides
-    fun provideBaseUrl() = Constants.BASE_URL
+    fun providesApiService(retrofit: Retrofit): ApiService {
+        return retrofit.create(ApiService::class.java)
+    }
 
     @Provides
     @Singleton
-    fun provideRetrofitInstance(BASE_URL: String): ApiService =
-        Retrofit.Builder()
+    fun provideRetrofitClient(): Retrofit {
+        return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(ApiService::class.java)
-
-
+    }
 }

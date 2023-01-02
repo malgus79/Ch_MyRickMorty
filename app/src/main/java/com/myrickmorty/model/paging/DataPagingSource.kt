@@ -2,9 +2,9 @@ package com.myrickmorty.model.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.myrickmorty.model.data.RickMorty
-import com.myrickmorty.domain.Repository
 import com.myrickmorty.core.Constants.PAGE_INDEX
+import com.myrickmorty.domain.Repository
+import com.myrickmorty.model.data.RickMorty
 import retrofit2.HttpException
 import java.io.IOException
 

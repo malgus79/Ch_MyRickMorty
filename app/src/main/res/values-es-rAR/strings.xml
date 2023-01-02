@@ -2,11 +2,8 @@
 <resources>
     <string name="fragment_detail">   Detalle del personaje   </string>
     <string name="extra_details">Detalles extras</string>
-    <string name="alertSignOutTitle">¿ Deseas salir de la aplicación ?</string>
-    <string name="alertSignOutTDescription">Puedes volver cuando quieras :)</string>
     <string name="ok">Ok</string>
     <string name="error_dialog">Error</string>
     <string name="error_dialog_detail">Ha ocurrido un error de conexión.</string>
     <string name="try_again">Reintentar</string>
-    <string name="error_dialog_retry">Error al intentar cargar información</string>
 </resources>

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -21,34 +20,44 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btn_enter"
-            style="@style/Widget.MaterialComponents.Chip.Entry"
+        <LinearLayout
+            android:id="@+id/layout_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="100dp"
-            android:backgroundTint="@color/green_met"
-            android:onClick="callEnter"
-            android:padding="@dimen/common_padding_default"
-            android:text="ENTER"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/iv_front_page" />
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_front_page">
 
-        <Button
-            android:id="@+id/btn_out"
-            style="@style/Widget.MaterialComponents.Chip.Entry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="100dp"
-            android:layout_marginTop="@dimen/common_padding_default"
-            android:backgroundTint="@color/purple_500"
-            android:onClick="callOut"
-            android:padding="@dimen/common_margin_default"
-            android:text="SALIR"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/btn_enter" />
+            <Button
+                android:id="@+id/btn_enter"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="100dp"
+                android:backgroundTint="@color/green_met"
+                android:padding="@dimen/common_padding_default"
+                android:text="ENTER"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/common_size_default"
+                app:layout_constraintTop_toBottomOf="@+id/iv_front_page" />
 
+            <Button
+                android:id="@+id/btn_out"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="100dp"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:backgroundTint="@color/purple_500"
+                android:padding="@dimen/common_margin_default"
+                android:text="SALIR"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/common_size_default"
+                app:layout_constraintTop_toBottomOf="@+id/btn_enter" />
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

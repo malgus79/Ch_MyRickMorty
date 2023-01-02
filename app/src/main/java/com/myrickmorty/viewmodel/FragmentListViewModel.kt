@@ -1,76 +1,32 @@
 package com.myrickmorty.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
-import com.myrickmorty.core.ApiStatus
-import com.myrickmorty.core.ResourceNotFoundException
-import com.myrickmorty.core.State
-import com.myrickmorty.model.data.ResponseApi
-import com.myrickmorty.model.paging.DataPagingSource
-import com.myrickmorty.domain.Repository
 import com.myrickmorty.core.Constants.PAGE_INDEX
+import com.myrickmorty.core.Resource
+import com.myrickmorty.domain.Repository
+import com.myrickmorty.model.paging.DataPagingSource
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.launch
-import retrofit2.Response
+import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
 
 @HiltViewModel
-class FragmentListViewModel
-@Inject
-constructor(
-    private val repository: Repository,
-) : ViewModel() {
+class FragmentListViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
 
-    //Internal/External MutableLiveData - ApiStatus
-    private val _statusData = MutableLiveData<ApiStatus>()
-    val statusData: LiveData<ApiStatus> = _statusData
-
-    //Internal/External MutableLiveData - ResponseApi
-    private val _characterList = MutableLiveData<State<Response<ResponseApi>>>()
-    val characterList: LiveData<State<Response<ResponseApi>>> = _characterList
-
-    //Downloads data from api with repository
-    fun getCharacters() {
-        _statusData.postValue(ApiStatus.LOADING)
-        _characterList.postValue(State.Loading())
-        viewModelScope.launch {
-            try {
-                val characterList = repository.getAllCharacters(PAGE_INDEX)
-                if (characterList.body()?.results.isNullOrEmpty()) {
-                    _statusData.postValue(ApiStatus.ERROR)
-                    _characterList.postValue(State.Failure(ResourceNotFoundException()))
-                } else {
-                    _statusData.postValue(ApiStatus.DONE)
-                    _characterList.postValue(State.Success(characterList))
-                }
-            } catch (e: Exception) {
-                _statusData.postValue(ApiStatus.ERROR)
-                _characterList.postValue(State.Failure(e))
-            }
+    fun fetchCharacters() = liveData(viewModelScope.coroutineContext + Dispatchers.IO) {
+        emit(Resource.Loading)
+        try {
+            emit(Resource.Success(repository.getAllCharacters((PAGE_INDEX))))
+        } catch (e: Exception) {
+            emit(Resource.Failure(e))
         }
     }
 
-    //Load data from DataPagingSource
     val listData = Pager(PagingConfig(pageSize = 1)) {
         DataPagingSource(repository)
     }.flow.cachedIn(viewModelScope)
 }
-
-/*
-    val getAllCharacters: Flow<PagingData<RickMorty>> =
-        Pager(config = PagingConfig(20, enablePlaceholders = false)) {
-            RickyMortyPagingSource(repository)
-        }.flow.cachedIn(viewModelScope)
-
-    fun getCharacter() = Pager(
-        config = PagingConfig(20, enablePlaceholders = false)
-    ) {
-        RickyMortyPagingSource(repository)
-    }
-*/
-

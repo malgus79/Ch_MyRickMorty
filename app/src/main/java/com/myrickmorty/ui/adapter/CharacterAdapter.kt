@@ -15,7 +15,6 @@ import com.myrickmorty.ui.fragment.FragmentListDirections
 class CharacterAdapter : PagingDataAdapter<RickMorty,
         CharacterAdapter.ImageViewHolder>(diffCallback) {
 
-
     inner class ImageViewHolder(
         val binding: CharacterLayoutBinding,
     ) :
@@ -70,12 +69,6 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
                     )
                     this.findNavController().navigate(action)
                 }
-
-//                val imageLink = currChar?.image
-//                imageView.load(imageLink) {
-//                    crossfade(true)
-//                    crossfade(1000)
-//                }
             }
         }
     }

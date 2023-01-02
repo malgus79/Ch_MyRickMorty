@@ -1,9 +1,9 @@
 package com.myrickmorty.ui
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
+import android.view.WindowManager
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.myrickmorty.R
 import com.myrickmorty.databinding.ActivityFrontBinding
@@ -17,34 +17,33 @@ class FrontActivity : AppCompatActivity() {
         binding = ActivityFrontBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupAnim()
+        setupActionButtons()
+
+    }
+
+    private fun setupActionButtons() {
         binding.btnEnter.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-
         binding.btnOut.setOnClickListener {
             finish()
         }
     }
 
-    override fun onBackPressed() {
-        //super.onBackPressed()
-        alertSignOut()
-    }
+    private fun setupAnim() {
+        //This is used to hide the status bar and make the splash screen as a full screen activity
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
 
-    //Dialog for signout
-    private fun alertSignOut() {
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.alertSignOutTitle))
-            .setMessage(R.string.alertSignOutTDescription)
-            .setPositiveButton(android.R.string.ok,
-                DialogInterface.OnClickListener { dialog, which ->
-                    finish()
-                })
-            .setNegativeButton(android.R.string.cancel,
-                DialogInterface.OnClickListener { dialog, which ->
-                })
-            .setCancelable(true)
-            .show()
+        val bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.desplazamiento_abajo)
+        binding.layoutBtn.startAnimation(bottomAnimation)
+
+        val headAnimation = AnimationUtils.loadAnimation(this, R.anim.desplazamiento_arriba)
+        binding.ivFrontPage.startAnimation(headAnimation)
+
     }
 }
