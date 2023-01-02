@@ -1,4 +1,4 @@
-package com.myrickmorty.repository
+package com.myrickmorty.domain
 
 import com.myrickmorty.model.api.ApiService
 import com.myrickmorty.model.data.ResponseApi

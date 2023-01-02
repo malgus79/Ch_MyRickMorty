@@ -1,7 +1,7 @@
 package com.myrickmorty.model.api
 
 import com.myrickmorty.model.data.ResponseApi
-import com.myrickmorty.utils.Constants
+import com.myrickmorty.core.Constants
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

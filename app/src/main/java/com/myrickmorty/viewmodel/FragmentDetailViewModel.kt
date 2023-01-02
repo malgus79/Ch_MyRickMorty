@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.myrickmorty.core.ApiStatus
-import com.myrickmorty.repository.Repository
-import com.myrickmorty.utils.Constants.PAGE_INDEX
+import com.myrickmorty.domain.Repository
+import com.myrickmorty.core.Constants.PAGE_INDEX
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

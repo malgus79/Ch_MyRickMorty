@@ -1,7 +1,7 @@
 package com.myrickmorty.di
 
 import com.myrickmorty.model.api.ApiService
-import com.myrickmorty.utils.Constants
+import com.myrickmorty.core.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

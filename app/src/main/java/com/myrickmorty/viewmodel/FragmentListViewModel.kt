@@ -11,9 +11,9 @@ import com.myrickmorty.core.ApiStatus
 import com.myrickmorty.core.ResourceNotFoundException
 import com.myrickmorty.core.State
 import com.myrickmorty.model.data.ResponseApi
-import com.myrickmorty.paging.DataPagingSource
-import com.myrickmorty.repository.Repository
-import com.myrickmorty.utils.Constants.PAGE_INDEX
+import com.myrickmorty.model.paging.DataPagingSource
+import com.myrickmorty.domain.Repository
+import com.myrickmorty.core.Constants.PAGE_INDEX
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
