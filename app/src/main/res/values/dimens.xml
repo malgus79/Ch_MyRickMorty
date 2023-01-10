@@ -20,5 +20,7 @@
     <!-- padding -->
     <dimen name="common_padding_min">8dp</dimen>
     <dimen name="common_padding_default">16dp</dimen>
+    <dimen name="error_image_size">50dp</dimen>
+    <dimen name="text_size_normal">20sp</dimen>
 
 </resources>
