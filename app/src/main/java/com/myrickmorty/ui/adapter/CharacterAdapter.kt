@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.myrickmorty.databinding.CharacterLayoutBinding
 import com.myrickmorty.model.data.RickMorty
-import com.myrickmorty.ui.fragment.FragmentListDirections
+import com.myrickmorty.ui.fragment.HomeFragmentDirections
 
 class CharacterAdapter : PagingDataAdapter<RickMorty,
         CharacterAdapter.ImageViewHolder>(diffCallback) {
@@ -56,7 +56,7 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
                     .into(imageView)
 
                 setOnClickListener {
-                    val action = FragmentListDirections.actionFragmentListToFragmentDetail(
+                    val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(
                         currChar?.gender.toString(),
                         currChar?.id!!,
                         currChar.image.toString(),

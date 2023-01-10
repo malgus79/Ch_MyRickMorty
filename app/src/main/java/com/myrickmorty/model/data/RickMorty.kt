@@ -12,3 +12,5 @@ data class RickMorty(
     val type: String?,
     val url: String?,
 )
+
+data class ResponseApi(val results: List<RickMorty>?)

@@ -12,7 +12,7 @@ import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
 
 @HiltViewModel
-class FragmentListViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
+class HomeViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
 
     val listData = repository.listDataRepository.cachedIn(viewModelScope)
 

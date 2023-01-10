@@ -10,10 +10,10 @@ import com.myrickmorty.databinding.FragmentDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class FragmentDetail : Fragment(R.layout.fragment_detail) {
+class DetailFragment : Fragment(R.layout.fragment_detail) {
 
     private lateinit var binding: FragmentDetailBinding
-    private val args by navArgs<FragmentDetailArgs>()
+    private val args by navArgs<DetailFragmentArgs>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

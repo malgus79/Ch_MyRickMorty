@@ -2,7 +2,7 @@ package com.myrickmorty.domain
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
-import com.myrickmorty.model.api.ApiService
+import com.myrickmorty.model.remote.ApiService
 import com.myrickmorty.model.data.ResponseApi
 import com.myrickmorty.model.paging.DataPagingSource
 import retrofit2.Response

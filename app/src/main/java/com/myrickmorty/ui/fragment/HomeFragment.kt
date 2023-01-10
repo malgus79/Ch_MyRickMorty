@@ -16,23 +16,23 @@ import com.myrickmorty.R
 import com.myrickmorty.core.Resource
 import com.myrickmorty.core.hide
 import com.myrickmorty.core.show
-import com.myrickmorty.databinding.FragmentListBinding
+import com.myrickmorty.databinding.FragmentHomeBinding
 import com.myrickmorty.ui.adapter.CharacterAdapter
-import com.myrickmorty.viewmodel.FragmentListViewModel
+import com.myrickmorty.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class FragmentList : Fragment(R.layout.fragment_list) {
+class HomeFragment : Fragment(R.layout.fragment_home) {
 
-    private lateinit var binding: FragmentListBinding
+    private lateinit var binding: FragmentHomeBinding
     private lateinit var characterAdapter: CharacterAdapter
-    private val viewModel: FragmentListViewModel by viewModels()
+    private val viewModel: HomeViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        binding = FragmentListBinding.inflate(inflater, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
         characterAdapter = CharacterAdapter()
 
         setupCharacters()

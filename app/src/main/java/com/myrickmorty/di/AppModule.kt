@@ -1,7 +1,7 @@
 package com.myrickmorty.di
 
 import com.myrickmorty.core.Constants.BASE_URL
-import com.myrickmorty.model.api.ApiService
+import com.myrickmorty.model.remote.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

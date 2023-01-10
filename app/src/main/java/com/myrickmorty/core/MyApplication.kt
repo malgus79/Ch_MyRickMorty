@@ -1,4 +1,4 @@
-package com.myrickmorty
+package com.myrickmorty.core
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

@@ -1,4 +1,4 @@
-package com.myrickmorty.model.api
+package com.myrickmorty.model.remote
 
 import com.myrickmorty.core.Constants
 import com.myrickmorty.model.data.ResponseApi
