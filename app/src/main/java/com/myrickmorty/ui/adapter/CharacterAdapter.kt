@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.myrickmorty.databinding.CharacterLayoutBinding
+import com.myrickmorty.databinding.ItemCharacterBinding
 import com.myrickmorty.model.data.RickMorty
 import com.myrickmorty.ui.fragment.HomeFragmentDirections
 
@@ -16,7 +16,7 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
         CharacterAdapter.ImageViewHolder>(diffCallback) {
 
     inner class ImageViewHolder(
-        val binding: CharacterLayoutBinding,
+        val binding: ItemCharacterBinding,
     ) :
         RecyclerView.ViewHolder(binding.root)
 
@@ -35,7 +35,7 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
         return ImageViewHolder(
-            CharacterLayoutBinding.inflate(
+            ItemCharacterBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent, false
             )

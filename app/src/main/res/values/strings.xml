@@ -7,10 +7,10 @@
     <string name="error_dialog">Error</string>
     <string name="error_dialog_detail">A connection error has occurred.</string>
     <string name="try_again">Retry</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="home">Home</string>
+
     <string name="favorite">Favorites</string>
     <string name="no_favorite_characters">No favorite characters</string>
-    <string name="home">Home</string>
 
 </resources>

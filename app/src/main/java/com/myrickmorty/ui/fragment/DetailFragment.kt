@@ -29,11 +29,6 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
             .centerCrop()
             .into(binding.imgCharacter)
 
-        Glide.with(requireContext())
-            .load(args.image)
-            .centerCrop()
-            .into(binding.imgCharacterSmall)
-
         binding.tvName.text = args.name
         binding.tvSpecies.text = args.species
         binding.tvStatus.text = args.status
