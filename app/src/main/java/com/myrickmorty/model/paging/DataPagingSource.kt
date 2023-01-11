@@ -21,7 +21,7 @@ class DataPagingSource(private val repository: Repository) : PagingSource<Int, R
             val currentPage = params.key ?: PAGE_INDEX
             val response = repository.getAllCharacters(currentPage)
             val responseData = mutableListOf<RickMorty>()
-            val data = response.body()?.results ?: emptyList()
+            val data = response.results ?: emptyList()
             responseData.addAll(data)
 
             LoadResult.Page(

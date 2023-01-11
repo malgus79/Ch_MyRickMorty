@@ -2,7 +2,7 @@ package com.myrickmorty.model.data
 
 data class RickMorty(
     val created: String?,
-    val episode: List<String>?,
+    //val episode: List<String>?,
     val gender: String?,
     val id: Int?,
     val image: String?,
@@ -13,4 +13,4 @@ data class RickMorty(
     val url: String?,
 )
 
-data class ResponseRickMorty(val results: List<RickMorty>?)
+data class RickMortyList(val results: List<RickMorty>?)

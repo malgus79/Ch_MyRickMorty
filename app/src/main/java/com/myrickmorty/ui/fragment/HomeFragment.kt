@@ -16,6 +16,7 @@ import com.myrickmorty.R
 import com.myrickmorty.core.Resource
 import com.myrickmorty.core.hide
 import com.myrickmorty.core.show
+import com.myrickmorty.core.showToast
 import com.myrickmorty.databinding.FragmentHomeBinding
 import com.myrickmorty.ui.adapter.CharacterAdapter
 import com.myrickmorty.viewmodel.HomeViewModel
@@ -47,7 +48,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     binding.progressBar.show()
                 }
                 is Resource.Success -> {
-                    if (it.data.body()?.results.isNullOrEmpty()) {
+                    if (it.data.results.isNullOrEmpty()) {
                         binding.progressBar.show()
                         return@Observer
                     }
@@ -58,11 +59,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 }
                 is Resource.Failure -> {
                     binding.progressBar.hide()
+                    showToast(getString(R.string.error_dialog_detail) + it.exception)
 
                     val handlerTimer = Handler()
                     handlerTimer.postDelayed({
                         showErrorDialog(callback = { setupCharacters() })
-
                     }, 1000)
                 }
             }
