@@ -2,6 +2,7 @@ package com.myrickmorty.domain
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
+import com.myrickmorty.model.data.RickMorty
 import com.myrickmorty.model.data.RickMortyList
 import com.myrickmorty.model.local.LocalDataSource
 import com.myrickmorty.model.local.toRickMortyEntity
@@ -25,5 +26,21 @@ class Repository @Inject constructor(
             localDataSource.saveCharacter(it.toRickMortyEntity())
         }
         return localDataSource.getAllCharacters()
+    }
+
+    suspend fun getFavoriteCharacters(): RickMortyList {
+        return localDataSource.getFavoriteCharacters()
+    }
+
+    suspend fun isCharacterFavorite(character: RickMorty): Boolean {
+        return localDataSource.isCharacterFavorite(character)
+    }
+
+    suspend fun deleteFavoriteCharacter(character: RickMorty) {
+        localDataSource.deleteCharacter(character)
+    }
+
+    suspend fun saveFavoriteCharacter(character: RickMorty) {
+        localDataSource.saveFavoriteCharacter(character)
     }
 }

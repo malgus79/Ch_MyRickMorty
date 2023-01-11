@@ -103,13 +103,13 @@
             tools:ignore="UnknownId,UseCompoundDrawables">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab_bookmark"
+                android:id="@+id/fab_favorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/favorite"
                 android:backgroundTint="@color/green_met"
                 android:src="@drawable/ic_add"
-                app:rippleColor="@color/green_met"
+                app:rippleColor="@color/black"
                 android:scaleY="0.8"
                 android:scaleX="0.8"/>
 

@@ -52,10 +52,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_favorite_characters"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/common_margin_min"
         android:layout_marginTop="@dimen/common_margin_min"
         android:orientation="vertical"
+        tools:listitem="@layout/item_favorite"
         app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

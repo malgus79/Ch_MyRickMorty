@@ -57,15 +57,7 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
 
                 setOnClickListener {
                     val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(
-                        currChar?.gender.toString(),
-                        currChar?.id!!,
-                        currChar.image.toString(),
-                        currChar.name.toString(),
-                        currChar.species.toString(),
-                        currChar.status.toString(),
-                        currChar.type.toString(),
-                        currChar.url.toString(),
-                        currChar.created.toString()
+                        currChar!!
                     )
                     this.findNavController().navigate(action)
                 }

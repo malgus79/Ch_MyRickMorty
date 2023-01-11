@@ -1,9 +1,6 @@
 package com.myrickmorty.model.local
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface RickMortyDao {
@@ -12,5 +9,18 @@ interface RickMortyDao {
     suspend fun getAllCharacters(): List<RickMortyEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveCharacter( character: RickMortyEntity)
+    suspend fun saveCharacter(character: RickMortyEntity)
+
+    @Query("SELECT * FROM favorite_entity")
+    fun getAllFavoriteCharactersWithChanges(): List<FavoriteEntity>
+
+    @Query("SELECT * FROM favorite_entity WHERE id = :characterId")
+    suspend fun getCharacterById(characterId: Int?): FavoriteEntity?
+
+    @Delete
+    suspend fun deleteFavoriteCharacter(favorites: FavoriteEntity)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun saveFavoriteCharacter(character: FavoriteEntity)
+
 }

@@ -10,8 +10,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_img_character"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/common_margin_24"
         android:layout_marginVertical="@dimen/common_margin_24"
         android:clipToPadding="true"
@@ -28,17 +28,21 @@
 
         <ImageView
             android:id="@+id/img_character"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
             android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher"
             android:contentDescription="@string/favorite"/>
 
         <TextView
-            android:id="@+id/tv_description"
+            android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
+            android:textAlignment="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginHorizontal="@dimen/common_margin_min"
             android:textColor="@color/black"
             android:textSize="@dimen/common_size_min"
             tools:ignore="HardcodedText" />

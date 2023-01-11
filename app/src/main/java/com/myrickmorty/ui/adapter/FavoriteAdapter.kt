@@ -77,6 +77,8 @@ class FavoriteAdapter(
                 .error(R.drawable.gradient)
                 .centerCrop()
                 .into(imgCharacter)
+
+            binding.tvName.text = item.name
         }
     }
 }

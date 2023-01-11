@@ -12,5 +12,7 @@
 
     <string name="favorite">Favorites</string>
     <string name="no_favorite_characters">No favorite characters</string>
+    <string name="removed_character">Removed from MY LIST</string>
+    <string name="added_character">Added to MY LIST</string>
 
 </resources>
