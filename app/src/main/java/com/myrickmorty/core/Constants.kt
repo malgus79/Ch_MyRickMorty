@@ -6,4 +6,6 @@ object Constants {
     const val END_POINT: String = "character"
     const val PAGE_INDEX = 1
 
+    const val APP_DATABASE_NAME = "rickmorty_database"
+
 }
