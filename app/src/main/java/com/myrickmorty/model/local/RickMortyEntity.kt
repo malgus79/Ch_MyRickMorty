@@ -5,7 +5,6 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.myrickmorty.model.data.RickMorty
 import com.myrickmorty.model.data.RickMortyList
-import retrofit2.Response
 
 @Entity(tableName = "character_entity")
 data class RickMortyEntity(
@@ -64,36 +63,6 @@ fun RickMorty.toRickMortyEntity(): RickMortyEntity = RickMortyEntity(
     this.type,
     this.url
 )
-
-fun List<FavoriteEntity>.asRickMortyList(): List<RickMorty> = this.map {
-    RickMorty(
-        it.id   ,
-        it.created,
-        it.gender,
-        it.image,
-        it.name,
-        it.species,
-        it.status,
-        it.type,
-        it.url
-    )
-}
-
-@JvmName("asRickMortyListRickMortyEntity")
-fun List<RickMortyEntity>.asRickMortyList(): List<RickMorty> = this.map {
-    RickMorty(
-        it.id   ,
-        it.created,
-        it.gender,
-        it.image,
-        it.name,
-        it.species,
-        it.status,
-        it.type,
-        it.url
-    )
-}
-
 
 @JvmName("toRickMortyListFavoriteEntity")
 fun List<FavoriteEntity>.toRickMortyList(): RickMortyList {

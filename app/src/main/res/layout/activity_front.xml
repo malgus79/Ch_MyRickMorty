@@ -18,6 +18,7 @@
             android:src="@mipmap/front_page"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/front_page"
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
@@ -38,7 +39,7 @@
                 android:layout_marginHorizontal="100dp"
                 android:backgroundTint="@color/green_met"
                 android:padding="@dimen/common_padding_default"
-                android:text="ENTER"
+                android:text="@string/entry"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="@dimen/common_size_default"
@@ -53,7 +54,7 @@
                 android:layout_marginTop="@dimen/common_padding_default"
                 android:backgroundTint="@color/purple_500"
                 android:padding="@dimen/common_margin_default"
-                android:text="SALIR"
+                android:text="@string/out"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="@dimen/common_size_default"

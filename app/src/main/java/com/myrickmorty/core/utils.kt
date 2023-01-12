@@ -2,7 +2,6 @@ package com.myrickmorty.core
 
 import android.content.Context
 import android.view.View
-import android.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 

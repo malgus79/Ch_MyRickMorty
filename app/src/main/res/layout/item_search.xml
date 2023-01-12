@@ -8,7 +8,7 @@
     android:layout_marginVertical="@dimen/common_margin_min"
     app:cardCornerRadius="@dimen/common_corner_default"
     app:cardElevation="@dimen/common_corner_min"
-    android:backgroundTint="@color/white">
+    android:backgroundTint="@color/blue_light_theme">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,7 +20,6 @@
             android:layout_height="130dp"
             android:layout_margin="@dimen/common_margin_min"
             app:cardCornerRadius="@dimen/common_corner_default"
-            android:backgroundTint="@color/black_dense"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -48,7 +47,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/mcv_movie"
             app:layout_constraintTop_toTopOf="@+id/mcv_movie"
-            tools:text="Peli Cool App" />
+            tools:text="@string/app_name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

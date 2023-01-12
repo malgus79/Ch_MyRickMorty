@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="@dimen/error_image_size"
-        android:layout_height="@dimen/error_image_size"
+        android:layout_width="@dimen/common_error_image"
+        android:layout_height="@dimen/common_error_image"
         android:src="@drawable/ic_error_outline"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/no_found_characters"
-        android:textSize="@dimen/text_size_normal"
+        android:textSize="@dimen/common_size_default"
         android:textColor="@color/red_theme"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"

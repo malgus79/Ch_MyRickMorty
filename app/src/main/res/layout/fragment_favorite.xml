@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".ui.MainActivity">
 
     <RelativeLayout
@@ -20,22 +21,6 @@
             android:layout_marginTop="@dimen/common_margin_max" />
 
     </RelativeLayout>
-
-<!--
-    <TextView
-        android:id="@+id/title_favorites"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/common_margin_min"
-        android:layout_marginTop="@dimen/common_margin_min"
-        android:gravity="center"
-        android:text="@string/favorite"
-        android:textColor="@color/black"
-        android:textSize="@dimen/common_size_default"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
--->
 
     <include
         android:id="@+id/empty_container"

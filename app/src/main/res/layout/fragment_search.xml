@@ -22,7 +22,7 @@
 
     </RelativeLayout>
 
-    <TextView
+<!--    <TextView
         android:id="@+id/title_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         android:textSize="@dimen/common_size_default"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/mcv_search_view"
@@ -42,16 +42,16 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/common_margin_default"
         android:layout_marginVertical="@dimen/common_margin_default"
-        app:cardCornerRadius="@dimen/search_view_radius"
+        app:cardCornerRadius="@dimen/common_corner_middle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_search">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@color/grey"
             android:iconifiedByDefault="false"
             android:imeOptions="actionDone|flagNoExtractUi"
             app:queryHint="@string/helper_search" />
@@ -77,7 +77,7 @@
         android:layout_height="0dp"
         android:layout_marginHorizontal="@dimen/common_margin_min"
         android:layout_marginTop="@dimen/common_margin_min"
-        android:background="@drawable/gradient"
+
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"

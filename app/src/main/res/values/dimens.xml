@@ -4,6 +4,7 @@
     <dimen name="common_margin_header">2dp</dimen>
     <dimen name="common_margin_min">8dp</dimen>
     <dimen name="common_margin_default">16dp</dimen>
+    <dimen name="common_margin_normal">24dp</dimen>
     <dimen name="common_margin_middle">32dp</dimen>
     <dimen name="common_margin_max">64dp</dimen>
 
@@ -16,13 +17,13 @@
     <!-- corner -->
     <dimen name="common_corner_min">8dp</dimen>
     <dimen name="common_corner_default">16dp</dimen>
+    <dimen name="common_corner_middle">20dp</dimen>
 
     <!-- padding -->
     <dimen name="common_padding_min">8dp</dimen>
     <dimen name="common_padding_default">16dp</dimen>
-    <dimen name="error_image_size">50dp</dimen>
-    <dimen name="text_size_normal">20sp</dimen>
-    <dimen name="common_margin_24">24dp</dimen>
-    <dimen name="search_view_radius">20dp</dimen>
+
+    <!-- error -->
+    <dimen name="common_error_image">50dp</dimen>
 
 </resources>

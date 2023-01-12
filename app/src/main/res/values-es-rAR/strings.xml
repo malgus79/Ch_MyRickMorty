@@ -3,6 +3,15 @@
     <string name="fragment_detail">   Detalle del personaje   </string>
     <string name="extra_details">Detalles extras</string>
     <string name="ok">Ok</string>
+    <string name="front_page">Portada</string>
+    <string name="entry">ENTRAR</string>
+    <string name="out">SALIR</string>
+    <string name="image">Imagen</string>
+    <string name="name">"Nombre: "</string>
+    <string name="type">"Tipo: "</string>
+    <string name="id">"Id: "</string>
+    <string name="created">"Creado: "</string>
+    <string name="url">"Url: "</string>
 
     <string name="error_dialog">Error</string>
     <string name="error_dialog_detail">Ha ocurrido un error.</string>
@@ -18,5 +27,4 @@
 
     <string name="search">Buscar</string>
     <string name="helper_search">Buscar un personaje</string>
-
 </resources>

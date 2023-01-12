@@ -4,6 +4,15 @@
     <string name="fragment_detail">   Character detail   </string>
     <string name="extra_details">Character details</string>
     <string name="ok">Ok</string>
+    <string name="front_page">Front page</string>
+    <string name="entry">ENTRY</string>
+    <string name="out">OUT</string>
+    <string name="image">Image</string>
+    <string name="name">"Name: "</string>
+    <string name="type">"Type: "</string>
+    <string name="id">"Id: "</string>
+    <string name="created">"Created: "</string>
+    <string name="url">"Url: "</string>
 
     <string name="error_dialog">Error</string>
     <string name="error_dialog_detail">A error has occurred.</string>
@@ -19,5 +28,4 @@
 
     <string name="search">Search</string>
     <string name="helper_search">Search a character</string>
-
 </resources>

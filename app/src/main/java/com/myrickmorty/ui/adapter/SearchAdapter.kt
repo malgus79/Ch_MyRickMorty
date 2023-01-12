@@ -10,7 +10,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.myrickmorty.R
 import com.myrickmorty.core.BaseViewHolder
-import com.myrickmorty.databinding.ItemCharacterSearchBinding
+import com.myrickmorty.databinding.ItemSearchBinding
 import com.myrickmorty.model.data.RickMorty
 
 class SearchAdapter(
@@ -32,7 +32,7 @@ class SearchAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<*> {
         val itemBinding =
-            ItemCharacterSearchBinding.inflate(LayoutInflater.from(context), parent, false)
+            ItemSearchBinding.inflate(LayoutInflater.from(context), parent, false)
 
         val holder = SearchViewHolder(itemBinding)
 
@@ -55,7 +55,7 @@ class SearchAdapter(
         }
     }
 
-    private inner class SearchViewHolder(private val binding: ItemCharacterSearchBinding) :
+    private inner class SearchViewHolder(private val binding: ItemSearchBinding) :
         BaseViewHolder<RickMorty>(binding.root) {
 
         override fun bind(item: RickMorty, position: Int) = with(binding) {

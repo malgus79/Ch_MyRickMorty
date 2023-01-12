@@ -38,7 +38,7 @@
                 android:id="@+id/img_character"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="image"
+                android:contentDescription="@string/image"
                 android:scaleType="centerCrop"
                 tools:src="@mipmap/ic_launcher" />
 
@@ -170,7 +170,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/white"
                 tools:text="name"
-                android:text="Name: "/>
+                android:text="@string/name" />
 
             <TextView
                 android:id="@+id/tv_name"
@@ -204,7 +204,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/white"
                 tools:text="type"
-                android:text="Type: "/>
+                android:text="@string/type" />
 
             <TextView
                 android:id="@+id/tv_type"
@@ -237,7 +237,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/white"
                 tools:text="type"
-                android:text="Id: "/>
+                android:text="@string/id" />
 
             <TextView
                 android:id="@+id/tv_id"
@@ -270,7 +270,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/white"
                 tools:text="type"
-                android:text="Created: "/>
+                android:text="@string/created" />
 
             <TextView
                 android:id="@+id/tv_created"
@@ -302,7 +302,7 @@
                 android:layout_marginTop="@dimen/common_margin_default"
                 android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/white"
-                android:text="Url: "/>
+                android:text="@string/url" />
 
             <TextView
                 android:id="@+id/tv_url"
@@ -313,7 +313,6 @@
                 android:layout_marginBottom="@dimen/common_margin_min"
                 android:textSize="@dimen/common_size_min"
                 android:fontFamily="@font/poppins_regular"
-                android:inputType="textMultiLine"
                 android:textColor="@color/white"
                 android:autoLink="web"
                 tools:text="url" />

@@ -48,7 +48,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     binding.progressBar.show()
                 }
                 is Resource.Success -> {
-                    if (it.data.results.isNullOrEmpty()) {
+                    if (it.data.results.isEmpty()) {
                         binding.progressBar.show()
                         return@Observer
                     }
