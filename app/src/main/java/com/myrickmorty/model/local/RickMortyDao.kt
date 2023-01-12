@@ -23,4 +23,7 @@ interface RickMortyDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveFavoriteCharacter(character: FavoriteEntity)
 
+    @Query("SELECT * FROM character_entity WHERE name LIKE '%' || :characterSearched || '%'") // This Like operator is needed due that the API returns blank spaces in the name
+    suspend fun getCharacters(characterSearched: String?): List<RickMortyEntity>
+
 }

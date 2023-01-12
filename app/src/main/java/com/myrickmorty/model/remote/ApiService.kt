@@ -1,6 +1,7 @@
 package com.myrickmorty.model.remote
 
-import com.myrickmorty.core.Constants
+import com.myrickmorty.core.Constants.PAGE
+import com.myrickmorty.core.Constants.PATH_URL
 import com.myrickmorty.model.data.RickMortyList
 import retrofit2.Response
 import retrofit2.http.GET
@@ -8,9 +9,14 @@ import retrofit2.http.Query
 
 interface ApiService {
 
-    @GET(Constants.END_POINT)
+    @GET(PATH_URL)
     suspend fun getAllCharacters(
-        @Query("page") page: Int
+        @Query(PAGE) page: Int
 
     ): Response<RickMortyList>
+
+    @GET(PATH_URL)
+    suspend fun getCharacterByName(
+        @Query(value = "") characterSearched: String
+    ): RickMortyList
 }

@@ -1,5 +1,6 @@
 package com.myrickmorty.model.local
 
+import com.myrickmorty.core.Resource
 import com.myrickmorty.model.data.RickMorty
 import com.myrickmorty.model.data.RickMortyList
 import com.myrickmorty.model.data.asFavoriteEntity
@@ -29,6 +30,10 @@ class LocalDataSource @Inject constructor(private val rickMortyDao: RickMortyDao
 
     suspend fun saveFavoriteCharacter(character: RickMorty) {
         return rickMortyDao.saveFavoriteCharacter(character.asFavoriteEntity())
+    }
+
+    suspend fun getCachedCharacters(characterSearched: String?): Resource<List<RickMorty>> {
+        return Resource.Success(rickMortyDao.getCharacters(characterSearched).toRickMortyList())
     }
 }
 

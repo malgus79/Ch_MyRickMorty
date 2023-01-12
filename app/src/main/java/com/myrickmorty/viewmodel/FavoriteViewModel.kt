@@ -6,9 +6,6 @@ import androidx.lifecycle.viewModelScope
 import com.myrickmorty.core.Resource
 import com.myrickmorty.domain.Repository
 import com.myrickmorty.model.data.RickMorty
-import com.myrickmorty.model.data.asFavoriteEntity
-import com.myrickmorty.model.data.asRickMortyEntity
-import com.myrickmorty.model.local.toRickMortyEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

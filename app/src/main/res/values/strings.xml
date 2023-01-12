@@ -6,7 +6,7 @@
     <string name="ok">Ok</string>
 
     <string name="error_dialog">Error</string>
-    <string name="error_dialog_detail">A connection error has occurred.</string>
+    <string name="error_dialog_detail">A error has occurred.</string>
     <string name="try_again">Retry</string>
 
     <string name="home">Home</string>
