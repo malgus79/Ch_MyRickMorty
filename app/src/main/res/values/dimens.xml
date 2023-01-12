@@ -23,5 +23,6 @@
     <dimen name="error_image_size">50dp</dimen>
     <dimen name="text_size_normal">20sp</dimen>
     <dimen name="common_margin_24">24dp</dimen>
+    <dimen name="search_view_radius">20dp</dimen>
 
 </resources>

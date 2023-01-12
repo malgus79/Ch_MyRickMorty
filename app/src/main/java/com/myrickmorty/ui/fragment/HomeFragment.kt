@@ -53,7 +53,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                         return@Observer
                     }
                     binding.progressBar.hide()
-                    binding.recyclerView.adapter = characterAdapter
                     setupRecyclerView()
                     loadData()
                 }
