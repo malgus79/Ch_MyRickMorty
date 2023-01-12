@@ -10,10 +10,10 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.myrickmorty.R
 import com.myrickmorty.core.BaseViewHolder
-import com.myrickmorty.databinding.ItemFavoriteBinding
+import com.myrickmorty.databinding.ItemCharacterSearchBinding
 import com.myrickmorty.model.data.RickMorty
 
-class FavoriteAdapter(
+class SearchAdapter(
     private val context: Context,
     private val itemClickListener: OnCharacterClickListener
 ) :
@@ -23,7 +23,6 @@ class FavoriteAdapter(
 
     interface OnCharacterClickListener {
         fun onCharacterClick(character: RickMorty, position: Int)
-        fun onCharacterLongClick(character: RickMorty, position: Int)
     }
 
     fun setCharacterList(characterList: List<RickMorty>) {
@@ -32,10 +31,10 @@ class FavoriteAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<*> {
-        val itemBinding = ItemFavoriteBinding.inflate(LayoutInflater.from(context), parent, false)
-//        return MainViewHolder(itemBinding)
+        val itemBinding =
+            ItemCharacterSearchBinding.inflate(LayoutInflater.from(context), parent, false)
 
-        val holder = FavoriteViewHolder(itemBinding)
+        val holder = SearchViewHolder(itemBinding)
 
         holder.itemView.setOnClickListener {
             val position =
@@ -45,16 +44,6 @@ class FavoriteAdapter(
             itemClickListener.onCharacterClick(characterList[position], position)
         }
 
-        holder.itemView.setOnLongClickListener {
-            val position =
-                holder.bindingAdapterPosition.takeIf { it != DiffUtil.DiffResult.NO_POSITION }
-                    ?: return@setOnLongClickListener true
-
-            itemClickListener.onCharacterLongClick(characterList[position], position)
-
-            return@setOnLongClickListener true
-        }
-
         return holder
     }
 
@@ -62,23 +51,24 @@ class FavoriteAdapter(
 
     override fun onBindViewHolder(holder: BaseViewHolder<*>, position: Int) {
         when (holder) {
-            is FavoriteViewHolder -> holder.bind(characterList[position], position)
+            is SearchViewHolder -> holder.bind(characterList[position], position)
         }
     }
 
-    private inner class FavoriteViewHolder(private val binding: ItemFavoriteBinding) :
+    private inner class SearchViewHolder(private val binding: ItemCharacterSearchBinding) :
         BaseViewHolder<RickMorty>(binding.root) {
 
-        override fun bind(item: RickMorty, position: Int): Unit = with(binding) {
+        override fun bind(item: RickMorty, position: Int) = with(binding) {
             Glide.with(context)
                 .load(item.image)
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .error(R.drawable.gradient)
                 .centerCrop()
-                .into(imgCharacter)
+                .into(imgMovie)
 
-            binding.tvName.text = item.name
+            txtTitle.text = item.name
+
         }
     }
 }

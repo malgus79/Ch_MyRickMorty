@@ -12,11 +12,11 @@
     <string name="home">Home</string>
 
     <string name="favorite">Favorites</string>
-    <string name="no_favorite_characters">No favorite characters</string>
     <string name="removed_character">Removed from MY LIST</string>
     <string name="added_character">Added to MY LIST</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="no_found_characters">no characters found</string>
+
     <string name="search">Search</string>
     <string name="helper_search">Search a character</string>
 

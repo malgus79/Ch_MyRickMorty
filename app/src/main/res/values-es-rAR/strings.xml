@@ -11,7 +11,12 @@
     <string name="home">Home</string>
 
     <string name="favorite">Favoritos</string>
-    <string name="no_favorite_characters">Sin personajes favoritos</string>
     <string name="removed_character">Se eliminó de MI LISTA</string>
     <string name="added_character">Agregado a MI LISTA</string>
+
+    <string name="no_found_characters">No se encontraron personajes</string>
+
+    <string name="search">Buscar</string>
+    <string name="helper_search">Buscar un personaje</string>
+
 </resources>

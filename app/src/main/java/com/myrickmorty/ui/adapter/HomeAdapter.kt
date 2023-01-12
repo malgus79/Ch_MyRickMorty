@@ -12,10 +12,10 @@ import com.myrickmorty.databinding.ItemCharacterBinding
 import com.myrickmorty.model.data.RickMorty
 import com.myrickmorty.ui.fragment.HomeFragmentDirections
 
-class CharacterAdapter : PagingDataAdapter<RickMorty,
-        CharacterAdapter.ImageViewHolder>(diffCallback) {
+class HomeAdapter : PagingDataAdapter<RickMorty,
+        HomeAdapter.HomeViewHolder>(diffCallback) {
 
-    inner class ImageViewHolder(
+    inner class HomeViewHolder(
         val binding: ItemCharacterBinding,
     ) :
         RecyclerView.ViewHolder(binding.root)
@@ -33,8 +33,8 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
-        return ImageViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
+        return HomeViewHolder(
             ItemCharacterBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent, false
@@ -42,7 +42,7 @@ class CharacterAdapter : PagingDataAdapter<RickMorty,
         )
     }
 
-    override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
         val currChar = getItem(position)
 
         holder.binding.apply {

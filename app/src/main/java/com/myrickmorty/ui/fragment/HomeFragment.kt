@@ -18,7 +18,7 @@ import com.myrickmorty.core.hide
 import com.myrickmorty.core.show
 import com.myrickmorty.core.showToast
 import com.myrickmorty.databinding.FragmentHomeBinding
-import com.myrickmorty.ui.adapter.CharacterAdapter
+import com.myrickmorty.ui.adapter.HomeAdapter
 import com.myrickmorty.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -27,14 +27,14 @@ import kotlinx.coroutines.launch
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private lateinit var binding: FragmentHomeBinding
-    private lateinit var characterAdapter: CharacterAdapter
+    private lateinit var homeAdapter: HomeAdapter
     private val viewModel: HomeViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-        characterAdapter = CharacterAdapter()
+        homeAdapter = HomeAdapter()
 
         setupCharacters()
 
@@ -71,7 +71,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private fun setupRecyclerView() {
         binding.recyclerView.apply {
-            adapter = characterAdapter
+            adapter = homeAdapter
             layoutManager = StaggeredGridLayoutManager(
                 resources.getInteger(R.integer.main_columns),
                 StaggeredGridLayoutManager.VERTICAL
@@ -84,7 +84,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         lifecycleScope.launch {
             viewModel.listData.collect {
                 Log.d("aaa", "load: $it")
-                characterAdapter.submitData(it)
+                homeAdapter.submitData(it)
             }
         }
     }

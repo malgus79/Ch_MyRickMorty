@@ -20,7 +20,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/no_favorite_characters"
+        android:text="@string/no_found_characters"
         android:textSize="@dimen/text_size_normal"
         android:textColor="@color/red_theme"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
