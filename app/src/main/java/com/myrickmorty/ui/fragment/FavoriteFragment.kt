@@ -2,6 +2,7 @@ package com.myrickmorty.ui.fragment
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -76,6 +77,7 @@ class FavoriteFragment : Fragment(R.layout.fragment_favorite),
     }
 
     override fun onCharacterLongClick(character: RickMorty, position: Int) {
-        TODO("Not yet implemented")
+        viewModel.deleteFavoriteCharacter(character)
+        Toast.makeText(requireContext(), R.string.removed_character, Toast.LENGTH_SHORT).show()
     }
 }
