@@ -1,4 +1,4 @@
-package com.myrickmorty.core
+package com.myrickmorty.core.connectivity
 
 import android.app.Application
 import android.content.Context

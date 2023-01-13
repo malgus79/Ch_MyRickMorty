@@ -9,7 +9,7 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.snackbar.Snackbar
 import com.myrickmorty.R
-import com.myrickmorty.core.ConnectionLiveData
+import com.myrickmorty.core.connectivity.ConnectionLiveData
 import com.myrickmorty.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 

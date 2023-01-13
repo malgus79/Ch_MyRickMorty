@@ -3,6 +3,7 @@ package com.myrickmorty.domain
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import com.myrickmorty.core.Resource
+import com.myrickmorty.core.connectivity.CheckInternet
 import com.myrickmorty.model.data.RickMorty
 import com.myrickmorty.model.data.RickMortyList
 import com.myrickmorty.model.local.LocalDataSource
@@ -30,10 +31,14 @@ class Repository @Inject constructor(
     }.flow
 
     suspend fun getAllCharacters(currentPage: Int): RickMortyList {
-        remoteDataSource.getAllCharacters(currentPage).body()?.results?.forEach {
-            localDataSource.saveCharacter(it.toRickMortyEntity())
+        return if (CheckInternet.isNetworkAvailable()) {
+            remoteDataSource.getAllCharacters(currentPage).body()?.results?.forEach {
+                localDataSource.saveCharacter(it.toRickMortyEntity())
+            }
+            localDataSource.getAllCharacters()
+        } else {
+            localDataSource.getAllCharacters()
         }
-        return localDataSource.getAllCharacters()
     }
 
     fun getFavoriteCharacters(): RickMortyList {
