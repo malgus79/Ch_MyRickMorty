@@ -29,4 +29,8 @@
 
     <string name="search">Buscar</string>
     <string name="helper_search">Buscar un personaje</string>
+
+    <string name="no_connection">Sin conexión a Internet</string>
+    <string name="rule_out">Descartar</string>
+    <string name="connection_restored">La conexión ha sido restaurada</string>
 </resources>

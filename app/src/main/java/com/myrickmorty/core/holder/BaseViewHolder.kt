@@ -1,4 +1,4 @@
-package com.myrickmorty.core
+package com.myrickmorty.core.holder
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

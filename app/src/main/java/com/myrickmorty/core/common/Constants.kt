@@ -1,4 +1,4 @@
-package com.myrickmorty.core
+package com.myrickmorty.core.common
 
 object Constants {
 

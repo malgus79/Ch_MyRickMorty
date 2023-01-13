@@ -1,6 +1,8 @@
 package com.myrickmorty.ui.fragment
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.SearchView
 import androidx.fragment.app.Fragment
@@ -10,13 +12,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.myrickmorty.R
 import com.myrickmorty.core.Resource
-import com.myrickmorty.core.hide
-import com.myrickmorty.core.show
-import com.myrickmorty.core.showToast
+import com.myrickmorty.core.common.hide
+import com.myrickmorty.core.common.show
 import com.myrickmorty.databinding.FragmentSearchBinding
 import com.myrickmorty.model.data.RickMorty
 import com.myrickmorty.ui.adapter.SearchAdapter
-import com.myrickmorty.viewmodel.SearchViewModel
+import com.myrickmorty.viewmodel.fragment.SearchViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -57,7 +58,7 @@ class SearchFragment : Fragment(R.layout.fragment_search), SearchAdapter.OnChara
                     }
                     is Resource.Failure -> {
                         progressBar.hide()
-                        showToast(getString(R.string.error_dialog_detail) + it.exception)
+                        Log.d(TAG, "Error: " + it.exception)
                     }
                 }
             }

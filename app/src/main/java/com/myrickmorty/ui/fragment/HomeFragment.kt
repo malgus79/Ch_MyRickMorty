@@ -14,12 +14,12 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.myrickmorty.R
 import com.myrickmorty.core.Resource
-import com.myrickmorty.core.hide
-import com.myrickmorty.core.show
-import com.myrickmorty.core.showToast
+import com.myrickmorty.core.common.hide
+import com.myrickmorty.core.common.show
+import com.myrickmorty.core.common.showToast
 import com.myrickmorty.databinding.FragmentHomeBinding
 import com.myrickmorty.ui.adapter.HomeAdapter
-import com.myrickmorty.viewmodel.HomeViewModel
+import com.myrickmorty.viewmodel.fragment.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

@@ -1,4 +1,4 @@
-package com.myrickmorty.core
+package com.myrickmorty.core.common
 
 import android.content.Context
 import android.view.View

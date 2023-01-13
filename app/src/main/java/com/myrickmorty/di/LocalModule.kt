@@ -2,7 +2,7 @@ package com.myrickmorty.di
 
 import android.content.Context
 import androidx.room.Room
-import com.myrickmorty.core.Constants.APP_DATABASE_NAME
+import com.myrickmorty.core.common.Constants.APP_DATABASE_NAME
 import com.myrickmorty.model.local.AppDatabase
 import com.myrickmorty.model.local.RickMortyDao
 import dagger.Module

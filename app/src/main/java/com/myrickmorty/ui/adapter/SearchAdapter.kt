@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.myrickmorty.R
-import com.myrickmorty.core.BaseViewHolder
+import com.myrickmorty.core.holder.BaseViewHolder
 import com.myrickmorty.databinding.ItemSearchBinding
 import com.myrickmorty.model.data.RickMorty
 

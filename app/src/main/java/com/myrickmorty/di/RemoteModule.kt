@@ -1,6 +1,6 @@
 package com.myrickmorty.di
 
-import com.myrickmorty.core.Constants.BASE_URL
+import com.myrickmorty.core.common.Constants.BASE_URL
 import com.myrickmorty.model.remote.ApiService
 import dagger.Module
 import dagger.Provides

@@ -1,10 +1,10 @@
-package com.myrickmorty.viewmodel
+package com.myrickmorty.viewmodel.fragment
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import com.myrickmorty.core.Constants.PAGE_INDEX
+import com.myrickmorty.core.common.Constants.PAGE_INDEX
 import com.myrickmorty.core.Resource
 import com.myrickmorty.domain.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel

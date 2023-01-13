@@ -1,4 +1,4 @@
-package com.myrickmorty.viewmodel
+package com.myrickmorty.viewmodel.fragment
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
