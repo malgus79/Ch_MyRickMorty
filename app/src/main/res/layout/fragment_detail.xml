@@ -91,15 +91,15 @@
             tools:text="gender" />
 
         <LinearLayout
-            android:id="@+id/linearLayout1"
+            android:id="@+id/linear_favorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/common_margin_default"
-            android:layout_marginTop="@dimen/common_margin_middle"
+            android:layout_marginTop="@dimen/common_size_default"
+            android:layout_marginEnd="@dimen/common_margin_middle"
             android:gravity="center"
             android:orientation="vertical"
-            app:layout_constraintStart_toEndOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="UnknownId,UseCompoundDrawables">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -122,6 +122,37 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/linear_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/common_margin_middle"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear_favorite"
+            app:layout_constraintBottom_toTopOf="@id/divider_line"
+            tools:ignore="UnknownId,UseCompoundDrawables">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/share"
+                android:backgroundTint="@color/green_met"
+                android:src="@drawable/ic_share"
+                app:rippleColor="@color/black"
+                android:scaleY="0.8"
+                android:scaleX="0.8"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/share"
+                android:textSize="@dimen/common_size_min"
+                android:textColor="@color/green_met" />
+
+        </LinearLayout>
 
         <View
             android:id="@+id/divider_line"
@@ -318,13 +349,6 @@
                 tools:text="url" />
 
         </LinearLayout>
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="285dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

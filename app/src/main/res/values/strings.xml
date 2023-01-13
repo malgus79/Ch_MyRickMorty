@@ -21,8 +21,10 @@
     <string name="home">Home</string>
 
     <string name="favorite">Favorites</string>
-    <string name="removed_character">Removed from MY LIST</string>
-    <string name="added_character">Added to MY LIST</string>
+    <string name="removed_character">Removed from Favorites</string>
+    <string name="added_character">Added to Favorites</string>
+
+    <string name="share">Share</string>
 
     <string name="no_found_characters">no characters found</string>
 

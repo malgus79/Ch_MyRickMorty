@@ -6,16 +6,16 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class RickMorty(
-    val id: Int?,
-    val created: String?,
+    val id: Int? = -1,
+    val created: String? = "",
     //val episode: List<String>?,
-    val gender: String?,
-    val image: String?,
-    val name: String?,
-    val species: String?,
-    val status: String?,
-    val type: String?,
-    val url: String?,
+    val gender: String? = "",
+    val image: String? = "",
+    val name: String? = "",
+    val species: String? = "",
+    val status: String? = "",
+    val type: String? = "",
+    val url: String? = "",
 ) : Parcelable
 
 data class RickMortyList(val results: List<RickMorty> = listOf())
