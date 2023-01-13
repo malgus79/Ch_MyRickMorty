@@ -2,15 +2,11 @@ package com.myrickmorty.viewmodel.fragment
 
 import com.myrickmorty.accessdata.JSONFileLoader
 import com.myrickmorty.core.common.Constants.BASE_URL
-import com.myrickmorty.core.common.Constants.PAGE_INDEX
 import com.myrickmorty.model.data.RickMorty
 import com.myrickmorty.model.remote.ApiService
 import kotlinx.coroutines.runBlocking
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.BeforeClass
 import org.junit.Test
