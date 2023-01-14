@@ -30,4 +30,7 @@ interface RickMortyDao {
     @Query("SELECT * FROM favorite_entity")
     fun getAllFavoriteCharacters(): List<FavoriteEntity>
 
+    @Query("DELETE FROM character_entity")
+    suspend fun deleteCached()
+
 }

@@ -35,6 +35,10 @@ class LocalDataSource @Inject constructor(private val rickMortyDao: RickMortyDao
     suspend fun getCachedCharacters(characterSearched: String?): Resource<List<RickMorty>> {
         return Resource.Success(rickMortyDao.getCharacters(characterSearched).toRickMortyList())
     }
+
+    suspend fun deleteCached() {
+        return rickMortyDao.deleteCached()
+    }
 }
 
 

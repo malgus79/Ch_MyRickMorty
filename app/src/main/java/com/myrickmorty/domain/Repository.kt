@@ -32,6 +32,8 @@ class Repository @Inject constructor(
 
     suspend fun getAllCharacters(currentPage: Int): RickMortyList {
         return if (CheckInternet.isNetworkAvailable()) {
+            localDataSource.deleteCached()
+
             remoteDataSource.getAllCharacters(currentPage).body()?.results?.forEach {
                 localDataSource.saveCharacter(it.toRickMortyEntity())
             }
