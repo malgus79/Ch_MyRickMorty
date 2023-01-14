@@ -70,7 +70,7 @@ class AppDatabaseTest {
     private fun executeDatabaseFunction() = runTest {
         val rickMortyEntity = RickMortyEntity(
             1,
-            "Rick Sanchez",
+            "2017-11-04T18:48:46.250Z",
             "Male",
             "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
             "Rick Sanchez",

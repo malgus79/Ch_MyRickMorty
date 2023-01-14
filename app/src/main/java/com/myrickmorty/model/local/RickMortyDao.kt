@@ -26,4 +26,8 @@ interface RickMortyDao {
     @Query("SELECT * FROM character_entity WHERE name LIKE '%' || :characterSearched || '%'") // This Like operator is needed due that the API returns blank spaces in the name
     suspend fun getCharacters(characterSearched: String?): List<RickMortyEntity>
 
+    //for androidTest in RickMortyDaoTest
+    @Query("SELECT * FROM favorite_entity")
+    fun getAllFavoriteCharacters(): List<FavoriteEntity>
+
 }
