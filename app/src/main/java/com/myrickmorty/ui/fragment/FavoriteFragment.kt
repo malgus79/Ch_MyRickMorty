@@ -79,6 +79,7 @@ class FavoriteFragment : Fragment(R.layout.fragment_favorite),
 
     override fun onCharacterLongClick(character: RickMorty, position: Int) {
         viewModel.deleteFavoriteCharacter(character)
+        setupFavoriteCharacters()
         Toast.makeText(requireContext(), R.string.removed_character, Toast.LENGTH_SHORT).show()
     }
 }
