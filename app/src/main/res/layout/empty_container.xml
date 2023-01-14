@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:text="@string/no_found_characters"
         android:textSize="@dimen/common_size_default"
-        android:textColor="?attr/colorOnSecondary"
+        android:textColor="?attr/colorOnPrimary"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
