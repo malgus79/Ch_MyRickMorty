@@ -8,7 +8,7 @@
     android:layout_marginVertical="@dimen/common_margin_min"
     app:cardCornerRadius="@dimen/common_corner_default"
     app:cardElevation="@dimen/common_corner_min"
-    android:backgroundTint="@color/blue_light_theme">
+    android:backgroundTint="?attr/colorSecondaryVariant">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -29,6 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@mipmap/ic_launcher"
+                android:background="@color/grey"
                 tools:ignore="ContentDescription" />
 
         </com.google.android.material.card.MaterialCardView>
@@ -40,7 +41,7 @@
             android:layout_marginHorizontal="@dimen/common_margin_default"
             android:maxLines="3"
             android:textSize="@dimen/common_size_default"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSecondary"
             android:textStyle="bold"
             android:ellipsize="end"
             app:layout_constraintBottom_toBottomOf="@id/mcv_movie"

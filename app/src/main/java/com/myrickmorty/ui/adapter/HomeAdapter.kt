@@ -7,7 +7,9 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.myrickmorty.R
 import com.myrickmorty.databinding.ItemCharacterBinding
 import com.myrickmorty.model.data.RickMorty
 import com.myrickmorty.ui.fragment.HomeFragmentDirections
@@ -53,6 +55,9 @@ class HomeAdapter : PagingDataAdapter<RickMorty,
                 Glide.with(this)
                     .load(currChar?.image)
                     .transition(DrawableTransitionOptions.withCrossFade())
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .error(R.drawable.gradient)
+                    .centerCrop()
                     .into(imageView)
 
                 setOnClickListener {

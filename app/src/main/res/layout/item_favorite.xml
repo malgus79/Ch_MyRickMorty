@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center"
     android:orientation="horizontal"
-    tools:background="@color/black">
+    tools:background="?attr/colorOnSecondary">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_img_character"
@@ -43,7 +43,7 @@
             android:maxLines="1"
             android:ellipsize="end"
             android:layout_marginHorizontal="@dimen/common_margin_min"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSecondary"
             android:textSize="@dimen/common_size_min"
             tools:ignore="HardcodedText" />
 

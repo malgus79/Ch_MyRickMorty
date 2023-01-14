@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/black_dense">
+        android:background="?attr/colorOnSecondary">
 
         <ImageView
             android:id="@+id/imageView"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/common_margin_min"
             android:text="TextView"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnPrimary"
             android:textSize="@dimen/common_size_default"
             tools:ignore="HardcodedText" />
     </LinearLayout>

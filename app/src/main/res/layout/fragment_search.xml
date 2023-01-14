@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="?attr/colorPrimaryVariant"
     tools:context=".ui.MainActivity">
 
     <RelativeLayout
@@ -37,7 +37,7 @@
             android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/grey"
+            android:background="?attr/colorSecondaryVariant"
             android:iconifiedByDefault="false"
             android:imeOptions="actionDone|flagNoExtractUi"
             app:queryHint="@string/helper_search" />

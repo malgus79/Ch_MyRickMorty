@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_dense">
+    android:background="?attr/colorPrimaryVariant">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -52,12 +52,13 @@
             android:layout_marginStart="@dimen/common_margin_middle"
             android:drawablePadding="@dimen/common_padding_min"
             android:textSize="@dimen/common_size_title"
-            android:textColor="@color/green_met"
+            android:textColor="?attr/colorSecondaryVariant"
             app:drawableStartCompat="@drawable/ic_star_border"
-            app:drawableTint="@color/green_met"
+            app:drawableTint="?attr/colorSecondaryVariant"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cardView"
-            tools:text="species" />
+            tools:text="species"
+            android:textStyle="bold"/>
 
 
         <TextView
@@ -68,12 +69,13 @@
             android:layout_marginStart="@dimen/common_margin_middle"
             android:drawablePadding="@dimen/common_padding_min"
             android:textSize="@dimen/common_size_title"
-            android:textColor="@color/green_met"
+            android:textColor="?attr/colorSecondaryVariant"
             app:drawableStartCompat="@drawable/ic_favorite_border"
-            app:drawableTint="@color/green_met"
+            app:drawableTint="?attr/colorSecondaryVariant"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_species"
-            tools:text="status" />
+            tools:text="status"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/tv_gender"
@@ -83,12 +85,13 @@
             android:layout_marginStart="@dimen/common_margin_middle"
             android:drawablePadding="@dimen/common_padding_min"
             android:textSize="@dimen/common_size_title"
-            android:textColor="@color/green_met"
+            android:textColor="?attr/colorSecondaryVariant"
             app:drawableStartCompat="@drawable/ic_transgender"
-            app:drawableTint="@color/green_met"
+            app:drawableTint="?attr/colorSecondaryVariant"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_status"
-            tools:text="gender" />
+            tools:text="gender"
+            android:textStyle="bold"/>
 
         <LinearLayout
             android:id="@+id/linear_favorite"
@@ -107,9 +110,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/favorite"
-                android:backgroundTint="@color/green_met"
+                android:backgroundTint="?attr/colorSecondaryVariant"
                 android:src="@drawable/ic_add"
-                app:rippleColor="@color/black"
+                app:rippleColor="?attr/colorOnSecondary"
                 android:scaleY="0.8"
                 android:scaleX="0.8"/>
 
@@ -118,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/favorite"
                 android:textSize="@dimen/common_size_min"
-                android:textColor="@color/green_met" />
+                android:textColor="?attr/colorSecondaryVariant" />
 
         </LinearLayout>
 
@@ -139,9 +142,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/share"
-                android:backgroundTint="@color/green_met"
+                android:backgroundTint="?attr/colorSecondaryVariant"
                 android:src="@drawable/ic_share"
-                app:rippleColor="@color/black"
+                app:rippleColor="?attr/colorOnSecondary"
                 android:scaleY="0.8"
                 android:scaleX="0.8"/>
 
@@ -150,7 +153,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/share"
                 android:textSize="@dimen/common_size_min"
-                android:textColor="@color/green_met" />
+                android:textColor="?attr/colorSecondaryVariant" />
 
         </LinearLayout>
 
@@ -160,7 +163,7 @@
             android:layout_height="2dp"
             android:layout_marginHorizontal="@dimen/common_margin_middle"
             android:layout_marginTop="@dimen/common_margin_middle"
-            android:background="@color/white"
+            android:background="?attr/colorOnPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_gender"
@@ -175,7 +178,7 @@
             android:gravity="center"
             android:padding="@dimen/common_padding_min"
             android:text="@string/extra_details"
-            android:textColor="@color/grey"
+            android:textColor="?attr/colorOnPrimary"
             android:textSize="@dimen/common_size_default"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -199,7 +202,7 @@
                 android:layout_marginStart="@dimen/common_margin_middle"
                 android:layout_marginTop="@dimen/common_margin_default"
                 android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 tools:text="name"
                 android:text="@string/name" />
 
@@ -210,7 +213,7 @@
                 android:layout_marginStart="@dimen/common_margin_default"
                 android:layout_marginTop="@dimen/common_margin_default"
                 android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:textSize="@dimen/common_size_default"
                 tools:text="name" />
 
@@ -233,7 +236,7 @@
                 android:layout_marginStart="@dimen/common_margin_middle"
                 android:layout_marginTop="@dimen/common_margin_default"
                 android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 tools:text="type"
                 android:text="@string/type" />
 
@@ -244,7 +247,7 @@
                 android:layout_marginStart="@dimen/common_margin_default"
                 android:layout_marginTop="@dimen/common_margin_default"
                 android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 tools:text="type" />
 
         </LinearLayout>
@@ -266,7 +269,7 @@
                 android:layout_marginStart="@dimen/common_margin_middle"
                 android:layout_marginTop="@dimen/common_margin_default"
                 android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 tools:text="type"
                 android:text="@string/id" />
 
@@ -277,7 +280,7 @@
                 android:layout_marginStart="@dimen/common_margin_default"
                 android:layout_marginTop="@dimen/common_margin_default"
                 android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 tools:text="id" />
 
         </LinearLayout>
@@ -299,7 +302,7 @@
                 android:layout_marginStart="@dimen/common_margin_middle"
                 android:layout_marginTop="@dimen/common_margin_default"
                 android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 tools:text="type"
                 android:text="@string/created" />
 
@@ -310,7 +313,7 @@
                 android:layout_marginStart="@dimen/common_margin_default"
                 android:layout_marginTop="@dimen/common_margin_default"
                 android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 tools:text="created" />
 
         </LinearLayout>
@@ -332,7 +335,7 @@
                 android:layout_marginStart="@dimen/common_margin_middle"
                 android:layout_marginTop="@dimen/common_margin_default"
                 android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:text="@string/url" />
 
             <TextView
@@ -344,7 +347,7 @@
                 android:layout_marginBottom="@dimen/common_margin_min"
                 android:textSize="@dimen/common_size_min"
                 android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:autoLink="web"
                 tools:text="url" />
 
