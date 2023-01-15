@@ -64,7 +64,7 @@ class FavoriteFragment : Fragment(R.layout.fragment_favorite),
         binding.rvFavoriteCharacters.apply {
             adapter = favoriteAdapter
             layoutManager = StaggeredGridLayoutManager(
-                resources.getInteger(R.integer.main_columns),
+                resources.getInteger(R.integer.main_columns_favorite),
                 StaggeredGridLayoutManager.VERTICAL
             )
             setHasFixedSize(true)

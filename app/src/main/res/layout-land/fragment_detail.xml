@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryVariant">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.DetailFragment">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_marginStart="@dimen/common_margin_max"
+            android:layout_marginTop="@dimen/common_margin_default"
+            android:layout_marginBottom="@dimen/common_margin_min"
+            android:clipToPadding="true"
+            app:cardCornerRadius="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_character"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/image"
+                android:scaleType="centerCrop"
+                tools:src="@mipmap/ic_launcher" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="385dp" />
+
+        <TextView
+            android:id="@+id/tv_species"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_default"
+            android:drawablePadding="@dimen/common_padding_min"
+            android:textColor="?attr/colorSecondaryVariant"
+            android:textSize="@dimen/common_size_title"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_star_border"
+            app:drawableTint="?attr/colorSecondaryVariant"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/cardView"
+            app:layout_constraintBottom_toTopOf="@id/tv_status"
+            tools:text="species" />
+
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_middle"
+            android:drawablePadding="@dimen/common_padding_min"
+            android:textColor="?attr/colorSecondaryVariant"
+            android:textSize="@dimen/common_size_title"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_favorite_border"
+            app:drawableTint="?attr/colorSecondaryVariant"
+            app:layout_constraintBottom_toTopOf="@id/tv_gender"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tv_species"
+            tools:text="status" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_middle"
+            android:layout_marginBottom="@dimen/common_margin_default"
+            android:drawablePadding="@dimen/common_padding_min"
+            android:textColor="?attr/colorSecondaryVariant"
+            android:textSize="@dimen/common_size_title"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_transgender"
+            app:drawableTint="?attr/colorSecondaryVariant"
+            app:layout_constraintBottom_toBottomOf="@id/cardView"
+
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status"
+            tools:text="gender" />
+
+        <LinearLayout
+            android:id="@+id/linear_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common_margin_max"
+            android:layout_marginTop="@dimen/common_margin_min"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_species"
+            tools:ignore="UnknownId,UseCompoundDrawables">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/colorSecondaryVariant"
+                android:contentDescription="@string/favorite"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:src="@drawable/ic_add"
+                app:rippleColor="?attr/colorOnSecondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favorite"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:textSize="@dimen/common_size_min" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_default"
+            android:layout_marginEnd="@dimen/common_margin_max"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/tv_gender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear_favorite"
+            tools:ignore="UnknownId,UseCompoundDrawables">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/colorSecondaryVariant"
+                android:contentDescription="@string/share"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:src="@drawable/ic_share"
+                app:rippleColor="?attr/colorOnSecondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/share"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:textSize="@dimen/common_size_min" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginHorizontal="@dimen/common_margin_middle"
+            android:layout_marginTop="@dimen/common_margin_middle"
+            android:background="?attr/colorOnPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_extra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_default"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:padding="@dimen/common_padding_min"
+            android:text="@string/extra_details"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="@dimen/common_size_default"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/divider_line" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_extra"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_middle"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/name"
+                android:textColor="?attr/colorOnPrimary"
+                tools:text="name" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_default"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="@dimen/common_size_default"
+                tools:text="name" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_Type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_min"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_Name"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_middle"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/type"
+                android:textColor="?attr/colorOnPrimary"
+                tools:text="type" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_default"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="?attr/colorOnPrimary"
+                tools:text="type" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_Id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_min"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_Type"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_middle"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/id"
+                android:textColor="?attr/colorOnPrimary"
+                tools:text="type" />
+
+            <TextView
+                android:id="@+id/tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_default"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="?attr/colorOnPrimary"
+                tools:text="id" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_Created"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_min"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_Id"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_middle"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/created"
+                android:textColor="?attr/colorOnPrimary"
+                tools:text="type" />
+
+            <TextView
+                android:id="@+id/tv_created"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_default"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="?attr/colorOnPrimary"
+                tools:text="created" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_Url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_min"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_Created"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_middle"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/url"
+                android:textColor="?attr/colorOnPrimary" />
+
+            <TextView
+                android:id="@+id/tv_url"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_margin_min"
+                android:layout_marginTop="@dimen/common_margin_default"
+                android:layout_marginBottom="@dimen/common_margin_min"
+                android:autoLink="web"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="@dimen/common_size_min"
+                tools:text="url" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

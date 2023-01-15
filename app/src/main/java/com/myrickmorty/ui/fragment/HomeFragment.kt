@@ -73,7 +73,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.recyclerView.apply {
             adapter = homeAdapter
             layoutManager = StaggeredGridLayoutManager(
-                resources.getInteger(R.integer.main_columns),
+                resources.getInteger(R.integer.main_columns_home),
                 StaggeredGridLayoutManager.VERTICAL
             )
             setHasFixedSize(true)
