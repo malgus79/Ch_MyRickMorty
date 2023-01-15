@@ -26,6 +26,7 @@ class FrontActivity : AppCompatActivity() {
         binding.btnEnter.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
         binding.btnOut.setOnClickListener {
             finish()
