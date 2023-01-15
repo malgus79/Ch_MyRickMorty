@@ -45,19 +45,19 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         viewModel.fetchCharacters().observe(viewLifecycleOwner, Observer {
             when (it) {
                 Resource.Loading -> {
-                    binding.progressBar.show()
+                    binding.containerLoading.root.show()
                 }
                 is Resource.Success -> {
                     if (it.data.results.isEmpty()) {
-                        binding.progressBar.show()
+                        binding.containerLoading.root.show()
                         return@Observer
                     }
-                    binding.progressBar.hide()
+                    binding.containerLoading.root.hide()
                     setupRecyclerView()
                     loadData()
                 }
                 is Resource.Failure -> {
-                    binding.progressBar.hide()
+                    binding.containerLoading.root.hide()
                     showToast(getString(R.string.error_dialog_detail) + it.exception)
 
                     val handlerTimer = Handler()
@@ -94,7 +94,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             .setTitle(getString(R.string.error_dialog))
             .setMessage(getString(R.string.error_dialog_detail))
             .setPositiveButton(getString(R.string.try_again)) { _, _ -> callback?.invoke() }
-            .setNegativeButton(getString(R.string.ok)) { _, _ -> binding.progressBar.show() }
+            .setNegativeButton(getString(R.string.ok)) { _, _ -> binding.containerLoading.root.show() }
             .setCancelable(false)
             .show()
     }
