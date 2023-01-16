@@ -1,7 +1,7 @@
 package com.myrickmorty.accessdata
 
 import com.google.gson.Gson
-import com.myrickmorty.model.data.RickMortyList
+import com.myrickmorty.data.model.RickMortyList
 import java.io.InputStreamReader
 
 class JSONFileLoader {

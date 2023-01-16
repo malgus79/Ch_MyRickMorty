@@ -11,7 +11,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.myrickmorty.R
 import com.myrickmorty.core.holder.BaseViewHolder
 import com.myrickmorty.databinding.ItemFavoriteBinding
-import com.myrickmorty.model.data.RickMorty
+import com.myrickmorty.data.model.RickMorty
 
 class FavoriteAdapter(
     private val context: Context,

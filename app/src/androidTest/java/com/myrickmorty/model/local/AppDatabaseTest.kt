@@ -7,6 +7,8 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import com.google.common.truth.Truth.assertThat
+import com.myrickmorty.data.local.AppDatabase
+import com.myrickmorty.data.local.RickMortyEntity
 import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Assert.*

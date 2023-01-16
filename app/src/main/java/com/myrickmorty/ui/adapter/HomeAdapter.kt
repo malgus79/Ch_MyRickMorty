@@ -11,8 +11,8 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.myrickmorty.R
 import com.myrickmorty.databinding.ItemCharacterBinding
-import com.myrickmorty.model.data.RickMorty
-import com.myrickmorty.ui.fragment.HomeFragmentDirections
+import com.myrickmorty.data.model.RickMorty
+import com.myrickmorty.ui.home.HomeFragmentDirections
 
 class HomeAdapter : PagingDataAdapter<RickMorty,
         HomeAdapter.HomeViewHolder>(diffCallback) {

@@ -1,8 +1,8 @@
 package com.myrickmorty.accessdata
 
 //import com.google.gson.Gson
-//import com.myrickmorty.model.data.RickMorty
-//import com.myrickmorty.model.data.RickMortyList
+//import com.myrickmorty.data.model.RickMorty
+//import com.myrickmorty.data.model.RickMortyList
 //import okhttp3.mockwebserver.MockResponse
 //import okhttp3.mockwebserver.MockWebServer
 //import org.hamcrest.MatcherAssert.assertThat

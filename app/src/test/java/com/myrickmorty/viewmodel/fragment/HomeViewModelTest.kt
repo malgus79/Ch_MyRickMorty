@@ -2,10 +2,10 @@ package com.myrickmorty.viewmodel.fragment
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.myrickmorty.accessdata.JSONFileLoader
-import com.myrickmorty.core.common.Constants
-import com.myrickmorty.core.common.Constants.PAGE_INDEX
-import com.myrickmorty.model.data.RickMorty
-import com.myrickmorty.model.remote.ApiService
+import com.myrickmorty.application.Constants
+import com.myrickmorty.application.Constants.PAGE_INDEX
+import com.myrickmorty.data.model.RickMorty
+import com.myrickmorty.data.remote.ApiService
 import com.myrickmorty.viewmodel.MainDispatcherRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking

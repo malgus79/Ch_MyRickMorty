@@ -8,6 +8,10 @@ import androidx.test.filters.SmallTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import com.google.common.truth.Truth.*
+import com.myrickmorty.data.local.AppDatabase
+import com.myrickmorty.data.local.FavoriteEntity
+import com.myrickmorty.data.local.RickMortyDao
+import com.myrickmorty.data.local.RickMortyEntity
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule

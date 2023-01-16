@@ -2,8 +2,8 @@ package com.myrickmorty.viewmodel
 
 //import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 //import com.myrickmorty.model.data.ResponseApi
-//import com.myrickmorty.model.data.RickMorty
-//import com.myrickmorty.domain.Repository
+//import com.myrickmorty.data.model.RickMorty
+//import com.myrickmorty.data.Repository
 //import io.mockk.MockKStubScope
 //import io.mockk.coEvery
 //import io.mockk.mockk

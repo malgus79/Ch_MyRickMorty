@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".core.MyApplication"
+        android:name=".application.MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,7 +17,7 @@
         android:theme="@style/Theme.MyRickMorty"
         tools:targetApi="31">
         <activity
-            android:name=".ui.FrontActivity"
+            android:name=".ui.front.FrontActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -31,7 +31,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true">
         </activity>
     </application>

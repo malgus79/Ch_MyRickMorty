@@ -1,6 +1,6 @@
 package com.myrickmorty.core
 
-import com.myrickmorty.model.data.RickMortyList
+import com.myrickmorty.data.model.RickMortyList
 
 sealed class Resource<out T> {
     object Loading : Resource<Nothing>()

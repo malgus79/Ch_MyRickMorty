@@ -1,9 +1,9 @@
 package com.myrickmorty.viewmodel.fragment
 
 import com.myrickmorty.accessdata.JSONFileLoader
-import com.myrickmorty.core.common.Constants.BASE_URL
-import com.myrickmorty.model.data.RickMorty
-import com.myrickmorty.model.remote.ApiService
+import com.myrickmorty.application.Constants.BASE_URL
+import com.myrickmorty.data.model.RickMorty
+import com.myrickmorty.data.remote.ApiService
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.MatcherAssert
 import org.hamcrest.Matchers
