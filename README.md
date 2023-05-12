@@ -1,5 +1,4 @@
 ## MyRickMorty
-Aplicacion de la serie Rick & Morty.
 
 - Arquitectura MVVM
 - Pattern Master-Detail
