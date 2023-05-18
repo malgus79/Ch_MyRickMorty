@@ -1,4 +1,6 @@
-## MyRickMorty
+# MyRickMorty
+
+Elementos utilizados:
 -Arquitectura MVVM
 -Pattern Master-Detail
 -Depuración en virtual device y dispositivos físicos.
@@ -13,9 +15,9 @@
 -Room
 -Dagger Hilt
 -Unit testing
-Mocck
-Mockito
-Hamcrest
+  -Mocck
+  -Mockito
+  -Hamcrest
     
     
     
