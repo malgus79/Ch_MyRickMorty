@@ -1,23 +1,23 @@
 # MyRickMorty
 
 Elementos utilizados:
--Arquitectura MVVM
--Pattern Master-Detail
--Depuración en virtual device y dispositivos físicos.
--Linear Layout, Constraint Layout, FrameLayout, NestedScrollView, Recycler Views, CardViews.
--Shimmer
--Paging
--Navigation component
--Coroutines
--Live Data
--Flow
--Retrofit2
--Room
--Dagger Hilt
--Unit testing
-  -Mocck
-  -Mockito
-  -Hamcrest
+- Arquitectura MVVM
+- Pattern Master-Detail
+- Depuración en virtual device y dispositivos físicos.
+- Linear Layout, Constraint Layout, FrameLayout, NestedScrollView, Recycler Views, CardViews.
+- Shimmer
+- Paging
+- Navigation component
+- Coroutines
+- Live Data
+- Flow
+- Retrofit2
+- Room
+- Dagger Hilt
+- Unit testing
+  - Mocck
+  - Mockito
+  - Hamcrest
     
     
     
